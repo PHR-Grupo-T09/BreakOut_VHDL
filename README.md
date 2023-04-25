@@ -1,6 +1,6 @@
 # BreakOut_VHDL
 
-# PROBLEMA A RESOLVER.
+## PROBLEMA A RESOLVER.
 
 En el mundo actual, existe una gran cantidad de dispositivos electrónicos que nos permiten entretenernos y relajarnos después de un día de trabajo. Desde smartphones y tabletas hasta consolas de videojuegos y PCs, hay una infinidad de opciones disponibles. Sin embargo, a veces se echa de menos la simplicidad y la emoción de los juegos clásicos como el ajedrez o el dominó.
 Aunque hay muchos videojuegos modernos que ofrecen gráficos impresionantes y experiencias de juego increíblemente inmersivas, estos pueden ser abrumadores para algunas personas. A veces, menos es más. Los juegos clásicos, por otro lado, son a menudo más fáciles de aprender y jugar, pero no por eso menos emocionantes.
@@ -9,7 +9,7 @@ Por otro lado, cabe resaltar el gran conocimiento que hay detrás de los videoju
 También es interesante ver cómo los juegos clásicos están regresando y ganando popularidad en la actualidad. A pesar de que los gráficos y la tecnología han avanzado mucho en las últimas décadas, hay algo en la simplicidad y la emoción de los juegos retro que sigue cautivando a los jugadores de todas las edades. Como se puede observar en esta noticia de 20minutos “lo retro está de moda”.
 Y es un juego tan famoso que las nuevas generaciones de consolas lo están sacando para sus nuevos dispositivos como en la Nintendo switch.
 
-# OBJETIVO
+## OBJETIVO
 Nuestro proyecto busca abordar la relevancia cultural de los juegos arcade al ofrecer una alternativa más económica y compacta a las máquinas recreativas tradicionales. Para lograr esto, nos enfocamos en crear un sistema que soporte el popular juego BREAKOUT utilizando una FPGA como elemento central.
 La implementación del juego se basa en una matriz de luces LED de 16x8 para representar visualmente la barra móvil y la bola. También utilizamos un display LED de 7 segmentos para mostrar el nivel y un zumbador para notificar cuando se pierde una vida o marcar el inicio y final de la partida. La interfaz de usuario se controla mediante un teclado hexadecimal que permite al usuario ingresar sus movimientos y opciones de selección.
 Como posibles objetivos que nos gustaría alcanzar aparte de lo ya descrito, sería aumentar el número de niveles, y poder añadir habilidades que el jugador pueda adquirir en el transcurso de la partida. 
@@ -17,7 +17,7 @@ Otro posible objetivo sería implementar una tecnología para permitir que los u
 El objetivo del proyecto es utilizar VHDL y una FPGA para implementar la lógica del juego, así como para controlar la matriz de LEDs y las luces LED que se utilizarán como indicadores de vidas. Se espera que el resultado final sea un juego completamente funcional que pueda ser jugado en la FPGA utilizando los botones de control y visualizado en la matriz de LEDs.
 El proyecto tiene como objetivo no solo desarrollar un juego de arcade en FPGA, sino también aprender y superar las dificultades que puedan surgir en el camino. Con esto, esperamos mejorar nuestra metodología y experiencia para futuros proyectos. En resumen, nuestro proyecto busca brindar una alternativa asequible y compacta a los juegos arcade tradicionales.
 
-# ESTADO DE LA TÉCNICA
+## ESTADO DE LA TÉCNICA
 
 Breakout es un juego arcade clásico que se lanzó en 1976 por Atari. El objetivo del juego es derribar una pared de ladrillos mediante el uso de una pelota y una barra móvil. El jugador controla la barra y debe rebotar la pelota para romper todos los ladrillos.
 
@@ -27,7 +27,7 @@ Nosotros haríamos algo muy similar, pero mejoraríamos el fondo, el tamaño y d
 "Design and Implementation of Breakout Game on FPGA using VGA Controller" (Sajjad et al., 2020): Este trabajo propone una implementación de Breakout en FPGA utilizando VHDL y un controlador VGA. El juego se controla mediante un teclado PS/2 y se muestra en una pantalla VGA. Una de las virtudes de este trabajo es la capacidad de implementar el juego en hardware y utilizar periféricos estándar, lo que puede mejorar la accesibilidad y la facilidad de uso. 
 Este proyecto incorporará una matriz de leds para jugar el juego, un teclado para poder mover la barra un contador de nivel y unos leds que indicarán las vidas que le quedan al jugador en cada momento de la partida y un zumbador para mostrar de forma sonora cuando un jugador pierde una vida o indicar el inicio y final de la partida. Finalmente, se conectará el ESP 32 para poder mostrar la información de la partida en un dispositivo móvil a través de una conexión inalámbrica.
 
-# SOLUCIÓN PROPUESTA
+## SOLUCIÓN PROPUESTA
 
 Una solución propuesta para alcanzar el objetivo del proyecto de implementar un juego de Breakout en una FPGA utilizando VHDL ,se requeriría llevar a cabo una investigación profunda sobre el juego Breakout, incluyendo su mecánica, diseño de niveles y la forma en que se actualizará la pantalla para mostrar el estado del juego. Esta información sería utilizada para diseñar la lógica del juego en VHDL.
 Una vez se tenga una idea clara de la lógica del juego, se podría proceder a implementarla utilizando VHDL. Sería importante asegurarse de que el código sea modular y escalable, permitiendo la fácil adición de nuevas funcionalidades en el futuro.
@@ -35,7 +35,7 @@ Una vez se tenga la lógica del juego implementada, se podría proceder a diseñ
 Finalmente, se deberá probar y depurar el juego en la FPGA, asegurándose de que todas las funcionalidades estén trabajando correctamente y que el juego sea fácil de jugar. Sería importante llevar a cabo pruebas exhaustivas para garantizar que el juego sea estable y libre de errores antes de considerarlo completamente funcional.
 En resumen, la primera solución propuesta sería llevar a cabo una investigación exhaustiva sobre la lógica del juego, implementarla utilizando VHDL y diseñar una interfaz de usuario efectiva antes de realizar pruebas y depuración para asegurar un juego funcional y satisfactorio.
 
-# REALIZACIÓN
+## REALIZACIÓN
 
 Para esta parte se va a identificar los pasos a seguir para la realización del Proyecto final. Para ello, se ha dividido el proyecto en los siguientes hitos:
 Anteproyecto: Se ha creado este documento como una idea previa de lo que se va a realizar.

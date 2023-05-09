@@ -29,12 +29,7 @@ begin
  j0: biestableJK port map(status =>Q,notStatus => Qn, clk => BUTTON, j =>'1',k =>'1');
 
 
-process_1 : process (BUTTON)
-begin
+
   LED <= Q;
-end process;
-
-
-
 
 end Behavioral;

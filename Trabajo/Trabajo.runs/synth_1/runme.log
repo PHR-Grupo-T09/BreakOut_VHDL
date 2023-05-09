@@ -10,6 +10,7 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source MatrizLED.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1253.051 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/utils_1/imports/synth_1/MatrizLED.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/utils_1/imports/synth_1/MatrizLED.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -21,49 +22,161 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10092
+INFO: [Synth 8-7075] Helper process launched with PID 12076
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MatrizLED' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:11]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_0' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:27]
-INFO: [Synth 8-638] synthesizing module 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:9]
-WARNING: [Synth 8-614] signal 'D' is read in the process but is not in the sensitivity list [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:15]
-WARNING: [Synth 8-614] signal 'Q' is read in the process but is not in the sensitivity list [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'biestableD' (1#1) [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:9]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_1' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:28]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_2' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:29]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_3' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:30]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_4' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:31]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_5' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:32]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_6' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:33]
-INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd0_7' of component 'biestableD' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:34]
-WARNING: [Synth 8-3848] Net D0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-WARNING: [Synth 8-3848] Net D7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'MatrizLED' (2#1) [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:11]
+INFO: [Synth 8-638] synthesizing module 'MatrizLED' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:17]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd00' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:9]
+WARNING: [Synth 8-614] signal 'D' is read in the process but is not in the sensitivity list [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:15]
+WARNING: [Synth 8-614] signal 'Q' is read in the process but is not in the sensitivity list [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'biestableD' (1#1) [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:9]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd01' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:50]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd02' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:51]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd03' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:52]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd04' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:53]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd05' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:54]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd06' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:55]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd07' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:56]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd10' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:58]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd11' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:59]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd12' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:60]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd13' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:61]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd14' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:62]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd15' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:63]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd16' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:64]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd17' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:65]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd20' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:67]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd21' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:68]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd22' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:69]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd23' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:70]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd24' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:71]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd25' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:72]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd26' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:73]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd27' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:74]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd30' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:76]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd31' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:77]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd32' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:78]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd33' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:79]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd34' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:80]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd35' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:81]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd36' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:82]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd37' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:83]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd40' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:85]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd41' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:86]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd42' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:87]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd43' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:88]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd44' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:89]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd45' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:90]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd46' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:91]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd47' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:92]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd50' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:94]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd51' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:95]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd52' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:96]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd53' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:97]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd54' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:98]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd55' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:99]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd56' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:100]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd57' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:101]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd60' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:103]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd61' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:104]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd62' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:105]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd63' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:106]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd64' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:107]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd65' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:108]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd66' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:109]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd67' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:110]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd70' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:112]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd71' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:113]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd72' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:114]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd73' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:115]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd74' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:116]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd75' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:117]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd76' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:118]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:4' bound to instance 'd77' of component 'biestableD' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:119]
+WARNING: [Synth 8-3848] Net D0_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D0_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:19]
+WARNING: [Synth 8-3848] Net D1_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D1_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:20]
+WARNING: [Synth 8-3848] Net D2_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D2_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:21]
+WARNING: [Synth 8-3848] Net D3_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D3_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:22]
+WARNING: [Synth 8-3848] Net D4_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D4_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:23]
+WARNING: [Synth 8-3848] Net D5_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D5_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:24]
+WARNING: [Synth 8-3848] Net D6_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D6_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:25]
+WARNING: [Synth 8-3848] Net D7_0 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_1 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_2 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_3 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_4 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_5 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_6 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+WARNING: [Synth 8-3848] Net D7_7 in module/entity MatrizLED does not have driver. [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'MatrizLED' (2#1) [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd:17]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-WARNING: [Synth 8-327] inferring latch for variable 'Q_reg' [C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:18]
+WARNING: [Synth 8-327] inferring latch for variable 'Q_reg' [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd:18]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -88,20 +201,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -119,37 +232,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -165,47 +278,103 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |LDC  |     8|
+|1     |LDC  |    64|
 |2     |IBUF |     1|
-|3     |OBUF |     8|
+|3     |OBUF |    64|
 +------+-----+------+
 
 Report Instance Areas: 
-+------+---------+-------------+------+
-|      |Instance |Module       |Cells |
-+------+---------+-------------+------+
-|1     |top      |             |    17|
-|2     |  d0_0   |biestableD   |     1|
-|3     |  d0_1   |biestableD_0 |     1|
-|4     |  d0_2   |biestableD_1 |     1|
-|5     |  d0_3   |biestableD_2 |     1|
-|6     |  d0_4   |biestableD_3 |     1|
-|7     |  d0_5   |biestableD_4 |     1|
-|8     |  d0_6   |biestableD_5 |     1|
-|9     |  d0_7   |biestableD_6 |     1|
-+------+---------+-------------+------+
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   129|
+|2     |  d00    |biestableD    |     1|
+|3     |  d01    |biestableD_0  |     1|
+|4     |  d02    |biestableD_1  |     1|
+|5     |  d03    |biestableD_2  |     1|
+|6     |  d04    |biestableD_3  |     1|
+|7     |  d05    |biestableD_4  |     1|
+|8     |  d06    |biestableD_5  |     1|
+|9     |  d07    |biestableD_6  |     1|
+|10    |  d10    |biestableD_7  |     1|
+|11    |  d11    |biestableD_8  |     1|
+|12    |  d12    |biestableD_9  |     1|
+|13    |  d13    |biestableD_10 |     1|
+|14    |  d14    |biestableD_11 |     1|
+|15    |  d15    |biestableD_12 |     1|
+|16    |  d16    |biestableD_13 |     1|
+|17    |  d17    |biestableD_14 |     1|
+|18    |  d20    |biestableD_15 |     1|
+|19    |  d21    |biestableD_16 |     1|
+|20    |  d22    |biestableD_17 |     1|
+|21    |  d23    |biestableD_18 |     1|
+|22    |  d24    |biestableD_19 |     1|
+|23    |  d25    |biestableD_20 |     1|
+|24    |  d26    |biestableD_21 |     1|
+|25    |  d27    |biestableD_22 |     1|
+|26    |  d30    |biestableD_23 |     1|
+|27    |  d31    |biestableD_24 |     1|
+|28    |  d32    |biestableD_25 |     1|
+|29    |  d33    |biestableD_26 |     1|
+|30    |  d34    |biestableD_27 |     1|
+|31    |  d35    |biestableD_28 |     1|
+|32    |  d36    |biestableD_29 |     1|
+|33    |  d37    |biestableD_30 |     1|
+|34    |  d40    |biestableD_31 |     1|
+|35    |  d41    |biestableD_32 |     1|
+|36    |  d42    |biestableD_33 |     1|
+|37    |  d43    |biestableD_34 |     1|
+|38    |  d44    |biestableD_35 |     1|
+|39    |  d45    |biestableD_36 |     1|
+|40    |  d46    |biestableD_37 |     1|
+|41    |  d47    |biestableD_38 |     1|
+|42    |  d50    |biestableD_39 |     1|
+|43    |  d51    |biestableD_40 |     1|
+|44    |  d52    |biestableD_41 |     1|
+|45    |  d53    |biestableD_42 |     1|
+|46    |  d54    |biestableD_43 |     1|
+|47    |  d55    |biestableD_44 |     1|
+|48    |  d56    |biestableD_45 |     1|
+|49    |  d57    |biestableD_46 |     1|
+|50    |  d60    |biestableD_47 |     1|
+|51    |  d61    |biestableD_48 |     1|
+|52    |  d62    |biestableD_49 |     1|
+|53    |  d63    |biestableD_50 |     1|
+|54    |  d64    |biestableD_51 |     1|
+|55    |  d65    |biestableD_52 |     1|
+|56    |  d66    |biestableD_53 |     1|
+|57    |  d67    |biestableD_54 |     1|
+|58    |  d70    |biestableD_55 |     1|
+|59    |  d71    |biestableD_56 |     1|
+|60    |  d72    |biestableD_57 |     1|
+|61    |  d73    |biestableD_58 |     1|
+|62    |  d74    |biestableD_59 |     1|
+|63    |  d75    |biestableD_60 |     1|
+|64    |  d76    |biestableD_61 |     1|
+|65    |  d77    |biestableD_62 |     1|
++------+---------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 68 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.051 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.250 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1253.051 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1253.051 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  LDC => LDCE: 8 instances
+  A total of 64 instances were transformed.
+  LDC => LDCE: 64 instances
 
-Synth Design complete, checksum: 66cc9801
+Synth Design complete, checksum: 670f125a
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+83 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1261.250 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/user2/Desktop/Trabajo/Trabajo.runs/synth_1/MatrizLED.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.051 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/MatrizLED.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MatrizLED_utilization_synth.rpt -pb MatrizLED_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  9 14:59:38 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue May  9 18:36:55 2023...

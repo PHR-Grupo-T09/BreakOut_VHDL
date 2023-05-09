@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue May  9 18:23:42 2023
+# Process ID: 10452
+# Current directory: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4732 C:\Users\user2\Desktop\git\BreakOut_VHDL\Trabajo\Trabajo.xpr
+# Log file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/vivado.log
+# Journal file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo\vivado.jou
+# Running On: micro06, OS: Windows, CPU Frequency: 3192 MHz, CPU Physical cores: 4, Host memory: 8542 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/DivisorFrecuencia.vhd w ]
+add_files C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/DivisorFrecuencia.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design

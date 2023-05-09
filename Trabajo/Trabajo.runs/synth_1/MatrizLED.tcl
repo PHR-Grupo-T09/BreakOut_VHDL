@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/user2/Desktop/Trabajo/Trabajo.runs/synth_1/MatrizLED.tcl"
+  variable script "C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/MatrizLED.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,19 +76,19 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/user2/Desktop/Trabajo/Trabajo.cache/wt [current_project]
-set_property parent.project_path C:/Users/user2/Desktop/Trabajo/Trabajo.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.cache/wt [current_project]
+set_property parent.project_path C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/user2/AppData/Roaming/Xilinx/Vivado/2021.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/user2/Desktop/Trabajo/Trabajo.cache/ip [current_project]
+set_property ip_output_repo c:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd
-  C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd
+  C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/biestableD.vhd
+  C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/MatrizLED.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

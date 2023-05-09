@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue May  9 18:58:42 2023
+# Process ID: 6832
+# Current directory: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1
+# Command line: vivado.exe -log Botones2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Botones2.tcl
+# Log file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/Botones2.vds
+# Journal file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1\vivado.jou
+# Running On: micro06, OS: Windows, CPU Frequency: 3192 MHz, CPU Physical cores: 4, Host memory: 8542 MB
+#-----------------------------------------------------------
+source Botones2.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/utils_1/imports/synth_1/MatrizLED.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/user2/Desktop/Trabajo/Trabajo.srcs/utils_1/imports/synth_1/MatrizLED.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Botones2 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8820
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1260.152 ; gain = 0.000
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] j is not declared [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/Botones2.1:27]
+ERROR: [Synth 8-1031] k is not declared [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/Botones2.1:28]
+ERROR: [Synth 8-1031] clk is not declared [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/Botones2.1:29]
+ERROR: [Synth 8-1031] status is not declared [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/Botones2.1:33]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.srcs/sources_1/new/Botones2.1:18]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1260.152 ; gain = 0.000
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue May  9 18:58:56 2023...

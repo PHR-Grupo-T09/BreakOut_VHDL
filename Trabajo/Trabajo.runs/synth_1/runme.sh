@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log MatrizLED.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MatrizLED.tcl
+EAStep vivado -log Botones2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Botones2.tcl

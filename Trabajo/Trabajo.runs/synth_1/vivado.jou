@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue May  9 18:36:19 2023
-# Process ID: 9092
+# Start of session at: Tue May  9 18:58:42 2023
+# Process ID: 6832
 # Current directory: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1
-# Command line: vivado.exe -log MatrizLED.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MatrizLED.tcl
-# Log file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/MatrizLED.vds
+# Command line: vivado.exe -log Botones2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Botones2.tcl
+# Log file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/Botones2.vds
 # Journal file: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1\vivado.jou
 # Running On: micro06, OS: Windows, CPU Frequency: 3192 MHz, CPU Physical cores: 4, Host memory: 8542 MB
 #-----------------------------------------------------------
-source MatrizLED.tcl -notrace
+source Botones2.tcl -notrace

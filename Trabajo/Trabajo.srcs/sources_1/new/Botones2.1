@@ -26,12 +26,12 @@ signal Q, Qn : std_logic;
     end component;
     
 begin
- j0: biestableD port map(status =>Q,notStatus => Qn, clk => BUTTON, j =>'1',k =>'1');
+ j0: biestableJK port map(status =>Q,notStatus => Qn, clk => BUTTON, j =>'1',k =>'1');
 
 
 process_1 : process (BUTTON)
 begin
-  LED <= status;
+  LED <= Q;
 end process;
 
 

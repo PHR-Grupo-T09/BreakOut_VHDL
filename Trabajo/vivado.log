@@ -124,3 +124,9 @@ INFO: [Project 1-1161] Replacing file C:/Users/user2/Desktop/Trabajo/Trabajo.src
 launch_runs synth_1 -jobs 2
 [Tue May  9 18:58:38 2023] Launched synth_1...
 Run output will be captured here: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue May  9 19:08:32 2023] Launched synth_1...
+Run output will be captured here: C:/Users/user2/Desktop/git/BreakOut_VHDL/Trabajo/Trabajo.runs/synth_1/runme.log

@@ -68,9 +68,9 @@ architecture behav of MatrizLED is
         enable <= '1';
 
         -- Especificas
-        -- mux_in(1) <= ''; -- 001 Mover derecha PONER LA SALIDA DEL MUX DE LA DERECHA
+        -- mux_in(1) <= ''; -- 001 Mover derecha PONER LA SALIDA DEL MUX DE LA IZQUIERDA
         -- mux_in(2) <= ''; -- 010 Disposicion inicial de la matriz de led
-        -- mux_in(4) <= ''; -- 100 Mover izquierda PONER LA SALIDA DEL MUX DE LA IZQUIERDA
+        -- mux_in(4) <= ''; -- 100 Mover izquierda PONER LA SALIDA DEL MUX DE LA DERECHA
 
 
         -- Mux 0

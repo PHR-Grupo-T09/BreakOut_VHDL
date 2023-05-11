@@ -62,7 +62,8 @@ architecture behav of MatrizLED is
 
 
     begin
-
+    
+          mux_sel <= "010";
         -- Enable general a todos los MUX
 
         enable <= '1';
@@ -75,11 +76,11 @@ architecture behav of MatrizLED is
 
         -- Mux 0
 
-        mux_in0(0) <= muxout0; -- Entrada anulada para cuando no haces nada 0 0 0 (se quede como está)
+        mux_in0(0) <= muxout0; -- Entrada anulada para cuando no haces nada 0 0 0 (se quede como estÃ¡)
         mux_in0(3) <= muxout0; -- 011 NO Se Usa
         mux_in0(5) <= muxout0; -- 101 NO Se Usa
         mux_in0(6) <= muxout0; -- 110 NO Se Usa
-        mux_in0(7) <= muxout0; -- Entrada anulada 1 1 1 (se quede como está)
+        mux_in0(7) <= muxout0; -- Entrada anulada 1 1 1 (se quede como estÃ¡)
 
         mux_in0(1) <= '0';    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
         mux_in0(2) <= '0';    -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
@@ -192,7 +193,7 @@ architecture behav of MatrizLED is
         Mux7: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in7, sel_i => mux_sel, ena_i => enable, y_o => muxout7);
 
-        -- Conexión de las señales D a las entradas de los biestables D
+        -- ConexiÃ³n de las seÃ±ales D a las entradas de los biestables D
         d00: biestableD port map(D => D0_0, clk => clk, Q => Q0_0, QN => QN0_0);
         d01: biestableD port map(D => D0_1, clk => clk, Q => Q0_1, QN => QN0_1);
         d02: biestableD port map(D => D0_2, clk => clk, Q => Q0_2, QN => QN0_2);
@@ -202,69 +203,68 @@ architecture behav of MatrizLED is
         d06: biestableD port map(D => D0_6, clk => clk, Q => Q0_6, QN => QN0_6);
         d07: biestableD port map(D => D0_7, clk => clk, Q => Q0_7, QN => QN0_7);
         
-        d10: biestableD port map(D => D1_0, clk => clk, Q => Q1_0, QN => QN1_0);
-        d11: biestableD port map(D => D1_1, clk => clk, Q => Q1_1, QN => QN1_1);
-        d12: biestableD port map(D => D1_2, clk => clk, Q => Q1_2, QN => QN1_2);
-        d13: biestableD port map(D => D1_3, clk => clk, Q => Q1_3, QN => QN1_3);
-        d14: biestableD port map(D => D1_4, clk => clk, Q => Q1_4, QN => QN1_4);
-        d15: biestableD port map(D => D1_5, clk => clk, Q => Q1_5, QN => QN1_5);
-        d16: biestableD port map(D => D1_6, clk => clk, Q => Q1_6, QN => QN1_6);
-        d17: biestableD port map(D => D1_7, clk => clk, Q => Q1_7, QN => QN1_7);
+--        d10: biestableD port map(D => D1_0, clk => clk, Q => Q1_0, QN => QN1_0);
+--        d11: biestableD port map(D => D1_1, clk => clk, Q => Q1_1, QN => QN1_1);
+--        d12: biestableD port map(D => D1_2, clk => clk, Q => Q1_2, QN => QN1_2);
+--        d13: biestableD port map(D => D1_3, clk => clk, Q => Q1_3, QN => QN1_3);
+--        d14: biestableD port map(D => D1_4, clk => clk, Q => Q1_4, QN => QN1_4);
+--        d15: biestableD port map(D => D1_5, clk => clk, Q => Q1_5, QN => QN1_5);
+--        d16: biestableD port map(D => D1_6, clk => clk, Q => Q1_6, QN => QN1_6);
+--        d17: biestableD port map(D => D1_7, clk => clk, Q => Q1_7, QN => QN1_7);
         
-        d20: biestableD port map(D => D2_0, clk => clk, Q => Q2_0, QN => QN2_0);
-        d21: biestableD port map(D => D2_1, clk => clk, Q => Q2_1, QN => QN2_1);
-        d22: biestableD port map(D => D2_2, clk => clk, Q => Q2_2, QN => QN2_2);
-        d23: biestableD port map(D => D2_3, clk => clk, Q => Q2_3, QN => QN2_3);
-        d24: biestableD port map(D => D2_4, clk => clk, Q => Q2_4, QN => QN2_4);
-        d25: biestableD port map(D => D2_5, clk => clk, Q => Q2_5, QN => QN2_5);
-        d26: biestableD port map(D => D2_6, clk => clk, Q => Q2_6, QN => QN2_6);
-        d27: biestableD port map(D => D2_7, clk => clk, Q => Q2_7, QN => QN2_7);
+--        d20: biestableD port map(D => D2_0, clk => clk, Q => Q2_0, QN => QN2_0);
+--        d21: biestableD port map(D => D2_1, clk => clk, Q => Q2_1, QN => QN2_1);
+--        d22: biestableD port map(D => D2_2, clk => clk, Q => Q2_2, QN => QN2_2);
+--        d23: biestableD port map(D => D2_3, clk => clk, Q => Q2_3, QN => QN2_3);
+--        d24: biestableD port map(D => D2_4, clk => clk, Q => Q2_4, QN => QN2_4);
+--        d25: biestableD port map(D => D2_5, clk => clk, Q => Q2_5, QN => QN2_5);
+--        d26: biestableD port map(D => D2_6, clk => clk, Q => Q2_6, QN => QN2_6);
+--        d27: biestableD port map(D => D2_7, clk => clk, Q => Q2_7, QN => QN2_7);
         
-        d30: biestableD port map(D => D3_0, clk => clk, Q => Q3_0, QN => QN3_0);
-        d31: biestableD port map(D => D3_1, clk => clk, Q => Q3_1, QN => QN3_1);
-        d32: biestableD port map(D => D3_2, clk => clk, Q => Q3_2, QN => QN3_2);
-        d33: biestableD port map(D => D3_3, clk => clk, Q => Q3_3, QN => QN3_3);
-        d34: biestableD port map(D => D3_4, clk => clk, Q => Q3_4, QN => QN3_4);
-        d35: biestableD port map(D => D3_5, clk => clk, Q => Q3_5, QN => QN3_5);
-        d36: biestableD port map(D => D3_6, clk => clk, Q => Q3_6, QN => QN3_6);
-        d37: biestableD port map(D => D3_7, clk => clk, Q => Q3_7, QN => QN3_7);
+--        d30: biestableD port map(D => D3_0, clk => clk, Q => Q3_0, QN => QN3_0);
+--        d31: biestableD port map(D => D3_1, clk => clk, Q => Q3_1, QN => QN3_1);
+--        d32: biestableD port map(D => D3_2, clk => clk, Q => Q3_2, QN => QN3_2);
+--        d33: biestableD port map(D => D3_3, clk => clk, Q => Q3_3, QN => QN3_3);
+--        d34: biestableD port map(D => D3_4, clk => clk, Q => Q3_4, QN => QN3_4);
+--        d35: biestableD port map(D => D3_5, clk => clk, Q => Q3_5, QN => QN3_5);
+--        d36: biestableD port map(D => D3_6, clk => clk, Q => Q3_6, QN => QN3_6);
+--        d37: biestableD port map(D => D3_7, clk => clk, Q => Q3_7, QN => QN3_7);
         
-        d40: biestableD port map(D => D4_0, clk => clk, Q => Q4_0, QN => QN4_0);
-        d41: biestableD port map(D => D4_1, clk => clk, Q => Q4_1, QN => QN4_1);
-        d42: biestableD port map(D => D4_2, clk => clk, Q => Q4_2, QN => QN4_2);
-        d43: biestableD port map(D => D4_3, clk => clk, Q => Q4_3, QN => QN4_3);
-        d44: biestableD port map(D => D4_4, clk => clk, Q => Q4_4, QN => QN4_4);
-        d45: biestableD port map(D => D4_5, clk => clk, Q => Q4_5, QN => QN4_5);
-        d46: biestableD port map(D => D4_6, clk => clk, Q => Q4_6, QN => QN4_6);
-        d47: biestableD port map(D => D4_7, clk => clk, Q => Q4_7, QN => QN4_7);
+--        d40: biestableD port map(D => D4_0, clk => clk, Q => Q4_0, QN => QN4_0);
+--        d41: biestableD port map(D => D4_1, clk => clk, Q => Q4_1, QN => QN4_1);
+--        d42: biestableD port map(D => D4_2, clk => clk, Q => Q4_2, QN => QN4_2);
+--        d43: biestableD port map(D => D4_3, clk => clk, Q => Q4_3, QN => QN4_3);
+--        d44: biestableD port map(D => D4_4, clk => clk, Q => Q4_4, QN => QN4_4);
+--        d45: biestableD port map(D => D4_5, clk => clk, Q => Q4_5, QN => QN4_5);
+--        d46: biestableD port map(D => D4_6, clk => clk, Q => Q4_6, QN => QN4_6);
+--        d47: biestableD port map(D => D4_7, clk => clk, Q => Q4_7, QN => QN4_7);
         
-        d50: biestableD port map(D => D5_0, clk => clk, Q => Q5_0, QN => QN5_0);
-        d51: biestableD port map(D => D5_1, clk => clk, Q => Q5_1, QN => QN5_1);
-        d52: biestableD port map(D => D5_2, clk => clk, Q => Q5_2, QN => QN5_2);
-        d53: biestableD port map(D => D5_3, clk => clk, Q => Q5_3, QN => QN5_3);
-        d54: biestableD port map(D => D5_4, clk => clk, Q => Q5_4, QN => QN5_4);
-        d55: biestableD port map(D => D5_5, clk => clk, Q => Q5_5, QN => QN5_5);
-        d56: biestableD port map(D => D5_6, clk => clk, Q => Q5_6, QN => QN5_6);
-        d57: biestableD port map(D => D5_7, clk => clk, Q => Q5_7, QN => QN5_7);
+--        d50: biestableD port map(D => D5_0, clk => clk, Q => Q5_0, QN => QN5_0);
+--        d51: biestableD port map(D => D5_1, clk => clk, Q => Q5_1, QN => QN5_1);
+--        d52: biestableD port map(D => D5_2, clk => clk, Q => Q5_2, QN => QN5_2);
+--        d53: biestableD port map(D => D5_3, clk => clk, Q => Q5_3, QN => QN5_3);
+--        d54: biestableD port map(D => D5_4, clk => clk, Q => Q5_4, QN => QN5_4);
+--        d55: biestableD port map(D => D5_5, clk => clk, Q => Q5_5, QN => QN5_5);
+--        d56: biestableD port map(D => D5_6, clk => clk, Q => Q5_6, QN => QN5_6);
+--        d57: biestableD port map(D => D5_7, clk => clk, Q => Q5_7, QN => QN5_7);
         
-        d60: biestableD port map(D => D6_0, clk => clk, Q => Q6_0, QN => QN6_0);
-        d61: biestableD port map(D => D6_1, clk => clk, Q => Q6_1, QN => QN6_1);
-        d62: biestableD port map(D => D6_2, clk => clk, Q => Q6_2, QN => QN6_2);
-        d63: biestableD port map(D => D6_3, clk => clk, Q => Q6_3, QN => QN6_3);
-        d64: biestableD port map(D => D6_4, clk => clk, Q => Q6_4, QN => QN6_4);
-        d65: biestableD port map(D => D6_5, clk => clk, Q => Q6_5, QN => QN6_5);
-        d66: biestableD port map(D => D6_6, clk => clk, Q => Q6_6, QN => QN6_6);
-        d67: biestableD port map(D => D6_7, clk => clk, Q => Q6_7, QN => QN6_7);
+--        d60: biestableD port map(D => D6_0, clk => clk, Q => Q6_0, QN => QN6_0);
+--        d61: biestableD port map(D => D6_1, clk => clk, Q => Q6_1, QN => QN6_1);
+--        d62: biestableD port map(D => D6_2, clk => clk, Q => Q6_2, QN => QN6_2);
+--        d63: biestableD port map(D => D6_3, clk => clk, Q => Q6_3, QN => QN6_3);
+--        d64: biestableD port map(D => D6_4, clk => clk, Q => Q6_4, QN => QN6_4);
+--        d65: biestableD port map(D => D6_5, clk => clk, Q => Q6_5, QN => QN6_5);
+--        d66: biestableD port map(D => D6_6, clk => clk, Q => Q6_6, QN => QN6_6);
+--        d67: biestableD port map(D => D6_7, clk => clk, Q => Q6_7, QN => QN6_7);
         
-        d70: biestableD port map(D => D7_0, clk => clk, Q => Q7_0, QN => QN7_0);
-        d71: biestableD port map(D => D7_1, clk => clk, Q => Q7_1, QN => QN7_1);
-        d72: biestableD port map(D => D7_2, clk => clk, Q => Q7_2, QN => QN7_2);
-        d73: biestableD port map(D => D7_3, clk => clk, Q => Q7_3, QN => QN7_3);
-        d74: biestableD port map(D => D7_4, clk => clk, Q => Q7_4, QN => QN7_4);
-        d75: biestableD port map(D => D7_5, clk => clk, Q => Q7_5, QN => QN7_5);
-        d76: biestableD port map(D => D7_6, clk => clk, Q => Q7_6, QN => QN7_6);
-        d77: biestableD port map(D => D7_7, clk => clk, Q => Q7_7, QN => QN7_7);
-
+--        d70: biestableD port map(D => D7_0, clk => clk, Q => Q7_0, QN => QN7_0);
+--        d71: biestableD port map(D => D7_1, clk => clk, Q => Q7_1, QN => QN7_1);
+--        d72: biestableD port map(D => D7_2, clk => clk, Q => Q7_2, QN => QN7_2);
+--        d73: biestableD port map(D => D7_3, clk => clk, Q => Q7_3, QN => QN7_3);
+--        d74: biestableD port map(D => D7_4, clk => clk, Q => Q7_4, QN => QN7_4);
+--        d75: biestableD port map(D => D7_5, clk => clk, Q => Q7_5, QN => QN7_5);
+--        d76: biestableD port map(D => D7_6, clk => clk, Q => Q7_6, QN => QN7_6);
+--        d77: biestableD port map(D => D7_7, clk => clk, Q => Q7_7, QN => QN7_7);
 
 
 end behav;

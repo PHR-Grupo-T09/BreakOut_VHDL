@@ -115,10 +115,82 @@ architecture behav of MatrizLED is
         mux_in2(2) <= '0';    -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
         mux_in2(4) <= muxout3;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
 
-        Mux1: MUX_Generico generic map(N => 3)
+        Mux2: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in2, sel_i => mux_sel, ena_i => enable, y_o => muxout2);
+        -- Mux 3
+            
+        mux_in3(0) <= muxout3;
+        mux_in3(3) <= muxout3;
+        mux_in3(5) <= muxout3;
+        mux_in3(6) <= muxout3;
+        mux_in3(7) <= muxout3;
 
-        -- Seguir hasta el 7
+        mux_in3(1) <= muxout2;    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in3(2) <= '0';    -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in3(4) <= muxout4;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+
+        Mux3: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in3, sel_i => mux_sel, ena_i => enable, y_o => muxout3);
+
+        -- Mux 4
+
+        mux_in4(0) <= muxout4;
+        mux_in4(3) <= muxout4;
+        mux_in4(5) <= muxout4;
+        mux_in4(6) <= muxout4;
+        mux_in4(7) <= muxout4;
+
+        mux_in4(1) <= muxout3;    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in4(2) <= '0';    -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in4(4) <= muxout5;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+
+        Mux4: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in4, sel_i => mux_sel, ena_i => enable, y_o => muxout4);
+
+        -- Mux 5
+
+        mux_in5(0) <= muxout5;
+        mux_in5(3) <= muxout5;
+        mux_in5(5) <= muxout5;
+        mux_in5(6) <= muxout5;
+        mux_in5(7) <= muxout5;
+
+        mux_in5(1) <= muxout4;    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in5(2) <= '0';    -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in5(4) <= muxout6;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+
+        Mux5: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in5, sel_i => mux_sel, ena_i => enable, y_o => muxout5);
+
+        -- Mux 6
+
+        mux_in6(0) <= muxout6;
+        mux_in6(3) <= muxout6;
+        mux_in6(5) <= muxout6;
+        mux_in6(6) <= muxout6;
+        mux_in6(7) <= muxout6;
+
+        mux_in6(1) <= muxout5;    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in6(2) <= '0';        -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in6(4) <= muxout7;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+
+        Mux6: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in6, sel_i => mux_sel, ena_i => enable, y_o => muxout6);
+
+        -- Mux 7
+
+        mux_in7(0) <= muxout7;
+        mux_in7(3) <= muxout7;
+        mux_in7(5) <= muxout7;
+        mux_in7(6) <= muxout7;
+        mux_in7(7) <= muxout7;
+
+        mux_in7(1) <= muxout6;    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in7(2) <= '0';        -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in7(4) <= muxout0;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+
+        Mux7: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in7, sel_i => mux_sel, ena_i => enable, y_o => muxout7);
 
         -- Conexión de las señales D a las entradas de los biestables D
         d00: biestableD port map(D => D0_0, clk => clk, Q => Q0_0, QN => QN0_0);

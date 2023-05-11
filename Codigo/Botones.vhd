@@ -1,35 +1,26 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+entity Botones is
+    Port (  buttonIn : in STD_LOGIC;
+            buttonOut : out STD_LOGIC);
+end Botones;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+architecture Behavioral of Botones is
 
-entity Botones2 is
-    Port ( BUTTON : in STD_LOGIC;
-           LED : out STD_LOGIC);
-end Botones2;
+    signal Q, Qn : std_logic;
 
-architecture Behavioral of Botones2 is
+    component biestableJK is
+            port (
+            status, notStatus : out std_logic;
+            clk, j, k : in std_logic
+        );
+        end component;
 
-signal Q, Qn : std_logic;
- component biestableJK is
-        port (
-        status, notStatus : out std_logic;
-        clk, j, k : in std_logic
-    );
-    end component;
-    
-begin
- j0: biestableJK port map(status =>Q,notStatus => Qn, clk => BUTTON, j =>'1',k =>'1');
+    begin
 
+        j0: biestableJK port map(status =>Q,notStatus => Qn, clk => buttonIn, j =>'1',k =>'1');
 
-
-  LED <= Q;
+        buttonOut <= Q;
 
 end Behavioral;

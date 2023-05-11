@@ -19,6 +19,8 @@ end entity;
 
 architecture behav of MatrizLED is
 
+    -- Biestable D
+
     signal QN0_0, QN0_1, QN0_2, QN0_3, QN0_4, QN0_5, QN0_6, QN0_7 : std_logic;
     signal QN1_0, QN1_1, QN1_2, QN1_3, QN1_4, QN1_5, QN1_6, QN1_7 : std_logic;
     signal QN2_0, QN2_1, QN2_2, QN2_3, QN2_4, QN2_5, QN2_6, QN2_7 : std_logic;
@@ -28,7 +30,6 @@ architecture behav of MatrizLED is
     signal QN6_0, QN6_1, QN6_2, QN6_3, QN6_4, QN6_5, QN6_6, QN6_7 : std_logic;
     signal QN7_0, QN7_1, QN7_2, QN7_3, QN7_4, QN7_5, QN7_6, QN7_7 : std_logic;
 
-
     component biestableD is
         port (
             D, clk : in std_logic;
@@ -37,10 +38,12 @@ architecture behav of MatrizLED is
         );
     end component;
 
-            
+    -- MUX
+
     signal mux_in0_0, mux_in0_1, mux_in0_2, mux_in0_3, mux_in0_4, mux_in0_5, mux_in0_6, mux_in0_7 : std_logic_vector(7 downto 0);
     signal mux_sel: std_logic_vector(2 downto 0);
-    signal enable, muxout0_0, muxout0_1, muxout0_3,  muxout0_2, muxout0_4, muxout0_5, muxout0_6, muxout0_7  : std_logic;
+    signal enable : std_logic;
+    signal muxout0_0, muxout0_1, muxout0_3,  muxout0_2, muxout0_4, muxout0_5, muxout0_6, muxout0_7  : std_logic;
 
     component MUX_Generico is 
         generic(N : positive := 2);
@@ -51,6 +54,14 @@ architecture behav of MatrizLED is
             y_o         : out std_logic
         );
     end component;
+
+    -- BOTONES
+
+    component Botones is
+        port(
+            
+        );
+        end component;
 
 
     begin
@@ -66,7 +77,7 @@ architecture behav of MatrizLED is
         enable <= '1';
 
 
-        -- Mux 0
+        -- Mux 0_0
 
         mux_in0_0(0) <= muxout0_0; 
         mux_in0_0(3) <= muxout0_0; 
@@ -78,10 +89,10 @@ architecture behav of MatrizLED is
         mux_in0_0(2) <= muxout0_1;  -- 10 0 
         mux_in0_0(4) <= '0';        -- 01 0 
 
-        Mux0: MUX_Generico generic map(N => 3)
+        Mux0_0: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_0, sel_i => mux_sel, ena_i => enable, y_o => muxout0_0);
 
-        -- Mux 1
+        -- Mux 0_1
 
         mux_in0_1(0) <= muxout0_1;
         mux_in0_1(3) <= muxout0_1;
@@ -93,10 +104,10 @@ architecture behav of MatrizLED is
         mux_in0_1(2) <= muxout0_0;  -- 01 0 
         mux_in0_1(4) <= muxout0_2;  -- 10 0 
 
-        Mux1: MUX_Generico generic map(N => 3)
+        Mux0_1: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_1, sel_i => mux_sel, ena_i => enable, y_o => muxout0_1);
 
-        -- Mux 2
+        -- Mux 0_2
 
         mux_in0_2(0) <= muxout0_2;
         mux_in0_2(3) <= muxout0_2;
@@ -108,10 +119,10 @@ architecture behav of MatrizLED is
         mux_in0_2(2) <= muxout0_1;  -- 01 0 
         mux_in0_2(4) <= muxout0_3;  -- 10 0 
 
-        Mux2: MUX_Generico generic map(N => 3)
+        Mux0_2: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_2, sel_i => mux_sel, ena_i => enable, y_o => muxout0_2);
 
-        -- Mux 3
+        -- Mux 0_3
             
         mux_in0_3(0) <= muxout0_3;
         mux_in0_3(3) <= muxout0_3;
@@ -123,10 +134,10 @@ architecture behav of MatrizLED is
         mux_in0_3(2) <= muxout0_2;  -- 01 0 
         mux_in0_3(4) <= muxout0_4;  -- 10 0
 
-        Mux3: MUX_Generico generic map(N => 3)
+        Mux0_3: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_3, sel_i => mux_sel, ena_i => enable, y_o => muxout0_3);
 
-        -- Mux 4
+        -- Mux 0_4
 
         mux_in0_4(0) <= muxout0_4;
         mux_in0_4(3) <= muxout0_4;
@@ -138,10 +149,10 @@ architecture behav of MatrizLED is
         mux_in0_4(2) <= muxout0_3;  -- 01 0 
         mux_in0_4(4) <= muxout0_5;  -- 10 0
 
-        Mux4: MUX_Generico generic map(N => 3)
+        Mux0_4: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_4, sel_i => mux_sel, ena_i => enable, y_o => muxout0_4);
 
-        -- Mux 5
+        -- Mux 0_5
 
         mux_in0_5(0) <= muxout0_5;
         mux_in0_5(3) <= muxout0_5;
@@ -153,10 +164,10 @@ architecture behav of MatrizLED is
         mux_in0_5(2) <= muxout0_4;  -- 01 0 
         mux_in0_5(4) <= muxout0_6;  -- 10 0 
 
-        Mux5: MUX_Generico generic map(N => 3)
+        Mux0_5: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_5, sel_i => mux_sel, ena_i => enable, y_o => muxout0_5);
 
-        -- Mux 6
+        -- Mux 0_6
 
         mux_in0_6(0) <= muxout0_6;
         mux_in0_6(3) <= muxout0_6;
@@ -168,10 +179,10 @@ architecture behav of MatrizLED is
         mux_in0_6(2) <= muxout0_5;  -- 01 0
         mux_in0_6(4) <= muxout0_7;  -- 10 0
 
-        Mux6: MUX_Generico generic map(N => 3)
+        Mux0_6: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_6, sel_i => mux_sel, ena_i => enable, y_o => muxout0_6);
 
-        -- Mux 7
+        -- Mux 0_7
 
         mux_in0_7(0) <= muxout0_7;
         mux_in0_7(3) <= muxout0_7;
@@ -183,7 +194,7 @@ architecture behav of MatrizLED is
         mux_in0_7(2) <= muxout0_6;  -- 01 0
         mux_in0_7(4) <= '0';        -- 10 0
 
-        Mux7: MUX_Generico generic map(N => 3)
+        Mux0_7: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_7, sel_i => mux_sel, ena_i => enable, y_o => muxout0_7);
 
 

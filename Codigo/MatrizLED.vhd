@@ -19,7 +19,7 @@ end entity;
 
 architecture behav of MatrizLED is
 
-    -- Biestable D
+    -- Biestable D --------------------------------------------------------------------
 
     signal QN0_0, QN0_1, QN0_2, QN0_3, QN0_4, QN0_5, QN0_6, QN0_7 : std_logic;
     signal QN1_0, QN1_1, QN1_2, QN1_3, QN1_4, QN1_5, QN1_6, QN1_7 : std_logic;
@@ -38,7 +38,7 @@ architecture behav of MatrizLED is
         );
     end component;
 
-    -- MUX
+    -- MUX -----------------------------------------------------------------------------
 
     signal mux_in0_0, mux_in0_1, mux_in0_2, mux_in0_3, mux_in0_4, mux_in0_5, mux_in0_6, mux_in0_7 : std_logic_vector(7 downto 0);
     signal mux_sel: std_logic_vector(2 downto 0);
@@ -55,22 +55,39 @@ architecture behav of MatrizLED is
         );
     end component;
 
-    -- BOTONES
+    -- BOTONES -------------------------------------------------------------------------
+
+    signal izquierdaBotIn, izquierdaBotOut : std_logic;
+    signal derechaBotIn, derechaBotOut : std_logic;
 
     component Botones is
         port(
-            
+            buttonIn : in STD_LOGIC;
+            buttonOut : out STD_LOGIC
         );
         end component;
 
 
     begin
+
+        -- BOTONES ----------------------------------------------------------------------
+
+        -- Boton Izquierda -- W19
+
+        botonIzquierda: Botones port map(buttonIn => izquierdaBotIn, buttonOut => izquierdaBotOut);
+        
+        -- Boton Derecha -- T17
+
+        botonIzquierda: Botones port map(buttonIn => derechaBotIn, buttonOut => derechaBotOut);
+
+
+        -- MUX --------------------------------------------------------------------------
         
         -- Entradas de seleccion para todos los mux
 
-        mux_sel(0) <= RESET;
-        mux_sel(1) <= '0';
-        mux_sel(2) <= '0';
+        mux_sel(0) <= RESET;                -- Inicial
+        mux_sel(1) <= derechaBotOut;        -- Derecha
+        mux_sel(2) <= izquierdaBotOut;      -- Izquierda
 
         -- Enable general a todos los MUX
 
@@ -198,6 +215,8 @@ architecture behav of MatrizLED is
         port map(i_i => mux_in0_7, sel_i => mux_sel, ena_i => enable, y_o => muxout0_7);
 
 
+
+        -- Biestables D ------------------------------------------------------------------
 
         -- ConexiÃ³n de las seÃ±ales D a las entradas de los biestables D
         d00: biestableD port map(D => muxout0_0, clk => clk, Q => Q0_0, QN => QN0_0);

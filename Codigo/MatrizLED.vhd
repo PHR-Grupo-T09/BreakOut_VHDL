@@ -19,15 +19,6 @@ end entity;
 
 architecture behav of MatrizLED is
 
-    signal D0_0, D0_1, D0_2, D0_3, D0_4, D0_5, D0_6, D0_7 : std_logic;
-    signal D1_0, D1_1, D1_2, D1_3, D1_4, D1_5, D1_6, D1_7 : std_logic;
-    signal D2_0, D2_1, D2_2, D2_3, D2_4, D2_5, D2_6, D2_7 : std_logic;
-    signal D3_0, D3_1, D3_2, D3_3, D3_4, D3_5, D3_6, D3_7 : std_logic;
-    signal D4_0, D4_1, D4_2, D4_3, D4_4, D4_5, D4_6, D4_7 : std_logic;
-    signal D5_0, D5_1, D5_2, D5_3, D5_4, D5_5, D5_6, D5_7 : std_logic;
-    signal D6_0, D6_1, D6_2, D6_3, D6_4, D6_5, D6_6, D6_7 : std_logic;
-    signal D7_0, D7_1, D7_2, D7_3, D7_4, D7_5, D7_6, D7_7 : std_logic;
-
     signal QN0_0, QN0_1, QN0_2, QN0_3, QN0_4, QN0_5, QN0_6, QN0_7 : std_logic;
     signal QN1_0, QN1_1, QN1_2, QN1_3, QN1_4, QN1_5, QN1_6, QN1_7 : std_logic;
     signal QN2_0, QN2_1, QN2_2, QN2_3, QN2_4, QN2_5, QN2_6, QN2_7 : std_logic;
@@ -47,9 +38,9 @@ architecture behav of MatrizLED is
     end component;
 
             
-    signal mux_in0, mux_in1, mux_in2, mux_in3, mux_in4, mux_in5, mux_in6, mux_in7 : std_logic_vector(7 downto 0);
+    signal mux_in0_0, mux_in0_1, mux_in0_2, mux_in0_3, mux_in0_4, mux_in0_5, mux_in0_6, mux_in0_7 : std_logic_vector(7 downto 0);
     signal mux_sel: std_logic_vector(2 downto 0);
-    signal enable, muxout0, muxout1, muxout3,  muxout2, muxout4, muxout5, muxout6, muxout7  : std_logic;
+    signal enable, muxout0_0, muxout0_1, muxout0_3,  muxout0_2, muxout0_4, muxout0_5, muxout0_6, muxout0_7  : std_logic;
 
     component MUX_Generico is 
         generic(N : positive := 2);
@@ -63,10 +54,13 @@ architecture behav of MatrizLED is
 
 
     begin
-          
-          mux_sel(0) <= RESET;
-          mux_sel(1) <= '0';
-          mux_sel(2) <= '0';
+        
+        -- Entradas de seleccion para todos los mux
+
+        mux_sel(0) <= RESET;
+        mux_sel(1) <= '0';
+        mux_sel(2) <= '0';
+
         -- Enable general a todos los MUX
 
         enable <= '1';
@@ -74,135 +68,135 @@ architecture behav of MatrizLED is
 
         -- Mux 0
 
-        mux_in0(0) <= muxout0; -- Entrada anulada para cuando no haces nada 0 0 0 (se quede como estÃ¡)
-        mux_in0(3) <= muxout0; -- 011 NO Se Usa
-        mux_in0(5) <= '0'; -- 101 NO Se Usa
-        mux_in0(6) <= '0'; -- 110 NO Se Usa
-        mux_in0(7) <= '0'; -- Entrada anulada 1 1 1 (se quede como estÃ¡)
+        mux_in0_0(0) <= muxout0_0; -- Entrada anulada para cuando no haces nada 0 0 0 (se quede como estÃ¡)
+        mux_in0_0(3) <= muxout0_0; -- 011 NO Se Usa
+        mux_in0_0(5) <= '0'; -- 101 NO Se Usa
+        mux_in0_0(6) <= '0'; -- 110 NO Se Usa
+        mux_in0_0(7) <= '0'; -- Entrada anulada 1 1 1 (se quede como estÃ¡)
 
-        mux_in0(1) <= '0';    -- 00 1 
-        mux_in0(2) <= muxout1;    -- 10 0 
-        mux_in0(4) <= '0';    -- 01 0 
+        mux_in0_0(1) <= '0';    -- 00 1 
+        mux_in0_0(2) <= muxout0_1;    -- 10 0 
+        mux_in0_0(4) <= '0';    -- 01 0 
 
         Mux0: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0, sel_i => mux_sel, ena_i => enable, y_o => muxout0);
+        port map(i_i => mux_in0_0, sel_i => mux_sel, ena_i => enable, y_o => muxout0_0);
 
         -- Mux 1
 
-        mux_in1(0) <= muxout1;
-        mux_in1(3) <= muxout1;
-        mux_in1(5) <= '0';
-        mux_in1(6) <= '0';
-        mux_in1(7) <= '0';
+        mux_in0_1(0) <= muxout0_1;
+        mux_in0_1(3) <= muxout0_1;
+        mux_in0_1(5) <= '0';
+        mux_in0_1(6) <= '0';
+        mux_in0_1(7) <= '0';
 
-        mux_in1(1) <= '0';    -- 00 1 
-        mux_in1(2) <= muxout0;    -- 01 0 
-        mux_in1(4) <= muxout2;    -- 10 0 
+        mux_in0_1(1) <= '0';    -- 00 1 
+        mux_in0_1(2) <= muxout0_0;    -- 01 0 
+        mux_in0_1(4) <= muxout0_2;    -- 10 0 
 
         Mux1: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1, sel_i => mux_sel, ena_i => enable, y_o => muxout1);
+        port map(i_i => mux_in0_1, sel_i => mux_sel, ena_i => enable, y_o => muxout0_1);
 
         -- Mux 2
 
-        mux_in2(0) <= muxout2;
-        mux_in2(3) <= muxout2;
-        mux_in2(5) <= '0';
-        mux_in2(6) <= '0';
-        mux_in2(7) <= '0';
+        mux_in0_2(0) <= muxout0_2;
+        mux_in0_2(3) <= muxout0_2;
+        mux_in0_2(5) <= '0';
+        mux_in0_2(6) <= '0';
+        mux_in0_2(7) <= '0';
 
-        mux_in2(1) <= '0';    -- 001 
-        mux_in2(2) <= muxout1;    -- 010 
-        mux_in2(4) <= muxout3;    -- 100 
+        mux_in0_2(1) <= '0';    -- 001 
+        mux_in0_2(2) <= muxout0_1;    -- 010 
+        mux_in0_2(4) <= muxout0_3;    -- 100 
 
         Mux2: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in2, sel_i => mux_sel, ena_i => enable, y_o => muxout2);
+        port map(i_i => mux_in0_2, sel_i => mux_sel, ena_i => enable, y_o => muxout0_2);
 
         -- Mux 3
             
-        mux_in3(0) <= muxout3;
-        mux_in3(3) <= muxout3;
-        mux_in3(5) <= '1';
-        mux_in3(6) <= '1';
-        mux_in3(7) <= '1';
+        mux_in0_3(0) <= muxout0_3;
+        mux_in0_3(3) <= muxout0_3;
+        mux_in0_3(5) <= '1';
+        mux_in0_3(6) <= '1';
+        mux_in0_3(7) <= '1';
 
-        mux_in3(1) <= '1';    -- 001
-        mux_in3(2) <= muxout2;    -- 010 
-        mux_in3(4) <= muxout4;    -- 100
+        mux_in0_3(1) <= '1';    -- 001
+        mux_in0_3(2) <= muxout0_2;    -- 010 
+        mux_in0_3(4) <= muxout0_4;    -- 100
 
         Mux3: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in3, sel_i => mux_sel, ena_i => enable, y_o => muxout3);
+        port map(i_i => mux_in0_3, sel_i => mux_sel, ena_i => enable, y_o => muxout0_3);
 
         -- Mux 4
 
-        mux_in4(0) <= muxout4;
-        mux_in4(3) <= muxout4;
-        mux_in4(5) <= '1';
-        mux_in4(6) <= '1';
-        mux_in4(7) <= '1';
+        mux_in0_4(0) <= muxout0_4;
+        mux_in0_4(3) <= muxout0_4;
+        mux_in0_4(5) <= '1';
+        mux_in0_4(6) <= '1';
+        mux_in0_4(7) <= '1';
 
-        mux_in4(1) <= '1';    -- 001
-        mux_in4(2) <= muxout3;    -- 010 
-        mux_in4(4) <= muxout5;    -- 100
+        mux_in0_4(1) <= '1';    -- 001
+        mux_in0_4(2) <= muxout0_3;    -- 010 
+        mux_in0_4(4) <= muxout0_5;    -- 100
 
         Mux4: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in4, sel_i => mux_sel, ena_i => enable, y_o => muxout4);
+        port map(i_i => mux_in0_4, sel_i => mux_sel, ena_i => enable, y_o => muxout0_4);
 
         -- Mux 5
 
-        mux_in5(0) <= muxout5;
-        mux_in5(3) <= muxout5;
-        mux_in5(5) <= '1';
-        mux_in5(6) <= '1';
-        mux_in5(7) <= '1';
+        mux_in0_5(0) <= muxout0_5;
+        mux_in0_5(3) <= muxout0_5;
+        mux_in0_5(5) <= '1';
+        mux_in0_5(6) <= '1';
+        mux_in0_5(7) <= '1';
 
-        mux_in5(1) <= '1';    -- 001 
-        mux_in5(2) <= muxout4;    -- 010 
-        mux_in5(4) <= muxout6;    -- 100 
+        mux_in0_5(1) <= '1';    -- 001 
+        mux_in0_5(2) <= muxout0_4;    -- 010 
+        mux_in0_5(4) <= muxout0_6;    -- 100 
 
         Mux5: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in5, sel_i => mux_sel, ena_i => enable, y_o => muxout5);
+        port map(i_i => mux_in0_5, sel_i => mux_sel, ena_i => enable, y_o => muxout0_5);
 
         -- Mux 6
 
-        mux_in6(0) <= muxout6;
-        mux_in6(3) <= muxout6;
-        mux_in6(5) <= '0';
-        mux_in6(6) <= '0';
-        mux_in6(7) <= '0';
+        mux_in0_6(0) <= muxout0_6;
+        mux_in0_6(3) <= muxout0_6;
+        mux_in0_6(5) <= '0';
+        mux_in0_6(6) <= '0';
+        mux_in0_6(7) <= '0';
 
-        mux_in6(1) <= '0';    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
-        mux_in6(2) <= muxout5;        -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
-        mux_in6(4) <= muxout7;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+        mux_in0_6(1) <= '0';    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in0_6(2) <= muxout0_5;        -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in0_6(4) <= muxout0_7;    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
 
         Mux6: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in6, sel_i => mux_sel, ena_i => enable, y_o => muxout6);
+        port map(i_i => mux_in0_6, sel_i => mux_sel, ena_i => enable, y_o => muxout0_6);
 
         -- Mux 7
 
-        mux_in7(0) <= muxout7;
-        mux_in7(3) <= muxout7;
-        mux_in7(5) <= '0';
-        mux_in7(6) <= '0';
-        mux_in7(7) <= '0';
+        mux_in0_7(0) <= muxout0_7;
+        mux_in0_7(3) <= muxout0_7;
+        mux_in0_7(5) <= '0';
+        mux_in0_7(6) <= '0';
+        mux_in0_7(7) <= '0';
 
-        mux_in7(1) <= '0';    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
-        mux_in7(2) <= muxout6;        -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
-        mux_in7(4) <= '0';    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
+        mux_in0_7(1) <= '0';    -- 001 Mover derecha (PONER LA SALIDA DEL MUX DE LA IZQUIERDA)
+        mux_in0_7(2) <= muxout0_6;        -- 010 Disposicion inicial  0 0 0 1 1 1 0 0
+        mux_in0_7(4) <= '0';    -- 100 Mover izquierda (PONER LA SALIDA DEL MUX DE LA DERECHA)
 
         Mux7: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in7, sel_i => mux_sel, ena_i => enable, y_o => muxout7);
+        port map(i_i => mux_in0_7, sel_i => mux_sel, ena_i => enable, y_o => muxout0_7);
 
 
 
         -- ConexiÃ³n de las seÃ±ales D a las entradas de los biestables D
-        d00: biestableD port map(D => muxout0, clk => clk, Q => Q0_0, QN => QN0_0);
-        d01: biestableD port map(D => muxout1, clk => clk, Q => Q0_1, QN => QN0_1);
-        d02: biestableD port map(D => muxout2, clk => clk, Q => Q0_2, QN => QN0_2);
-        d03: biestableD port map(D => muxout3, clk => clk, Q => Q0_3, QN => QN0_3);
-        d04: biestableD port map(D => muxout4, clk => clk, Q => Q0_4, QN => QN0_4);
-        d05: biestableD port map(D => muxout5, clk => clk, Q => Q0_5, QN => QN0_5);
-        d06: biestableD port map(D => muxout6, clk => clk, Q => Q0_6, QN => QN0_6);
-        d07: biestableD port map(D => muxout7, clk => clk, Q => Q0_7, QN => QN0_7);
+        d00: biestableD port map(D => muxout0_0, clk => clk, Q => Q0_0, QN => QN0_0);
+        d01: biestableD port map(D => muxout0_1, clk => clk, Q => Q0_1, QN => QN0_1);
+        d02: biestableD port map(D => muxout0_2, clk => clk, Q => Q0_2, QN => QN0_2);
+        d03: biestableD port map(D => muxout0_3, clk => clk, Q => Q0_3, QN => QN0_3);
+        d04: biestableD port map(D => muxout0_4, clk => clk, Q => Q0_4, QN => QN0_4);
+        d05: biestableD port map(D => muxout0_5, clk => clk, Q => Q0_5, QN => QN0_5);
+        d06: biestableD port map(D => muxout0_6, clk => clk, Q => Q0_6, QN => QN0_6);
+        d07: biestableD port map(D => muxout0_7, clk => clk, Q => Q0_7, QN => QN0_7);
         
 --        d10: biestableD port map(D => D1_0, clk => clk, Q => Q1_0, QN => QN1_0);
 --        d11: biestableD port map(D => D1_1, clk => clk, Q => Q1_1, QN => QN1_1);

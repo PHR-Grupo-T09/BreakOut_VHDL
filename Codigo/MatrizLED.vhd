@@ -61,8 +61,8 @@ architecture behav of MatrizLED is
 
     component Botones is
         port(
-            buttonIn : in STD_LOGIC;
-            buttonOut : out STD_LOGIC
+            buttonIn : inout STD_LOGIC;
+            buttonOut : inout STD_LOGIC
         );
         end component;
 

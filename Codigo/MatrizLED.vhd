@@ -86,16 +86,48 @@ architecture behav of MatrizLED is
         
         
         RESET1 <= RESET;
-        mux_sel(0) <= RESET;                -- Inicial
-        mux_sel(1) <= derechaBotOut;        -- Derecha
-        mux_sel(2) <= izquierdaBotOut;      -- Izquierda
+        mux_sel(0) <= RESET;                -- Inicial      001
+        mux_sel(1) <= derechaBotOut;        -- Derecha      010
+        mux_sel(2) <= izquierdaBotOut;      -- Izquierda    100
 
         -- Enable general a todos los MUX
 
         enable <= '1';
+        
 
+        -- Mux 0_0
+            
+        mux_in0_0(0) <= Q0_0;
+        mux_in0_0(3) <= Q0_0;
+        mux_in0_0(5) <= '0';
+        mux_in0_0(6) <= '0';
+        mux_in0_0(7) <= '0';
 
-       mux_in0_2(0) <= Q0_2;
+        mux_in0_0(1) <= '0';        -- 00 1
+        mux_in0_0(2) <= '0';  -- 01 0 
+        mux_in0_0(4) <= Q0_1;  -- 10 0
+
+        Mux0_0: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_0, sel_i => mux_sel, ena_i => enable, y_o => muxout0_0);
+
+        -- Mux 0_1
+            
+        mux_in0_1(0) <= Q0_1;
+        mux_in0_1(3) <= Q0_1;
+        mux_in0_1(5) <= '0';
+        mux_in0_1(6) <= '0';
+        mux_in0_1(7) <= '0';
+
+        mux_in0_1(1) <= '0';        -- 00 1
+        mux_in0_1(2) <= Q0_0;  -- 01 0 
+        mux_in0_1(4) <= Q0_2;  -- 10 0
+
+        Mux0_1: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_1, sel_i => mux_sel, ena_i => enable, y_o => muxout0_1);
+
+        -- Mux 0_2
+
+        mux_in0_2(0) <= Q0_2;
         mux_in0_2(3) <= Q0_2;
         mux_in0_2(5) <= '0';
         mux_in0_2(6) <= '0';
@@ -187,7 +219,7 @@ architecture behav of MatrizLED is
 
         -- Biestables D ------------------------------------------------------------------
 
-        -- ConexiÃ³n de las seÃ±ales D a las entradas de los biestables D
+        -- ConexiÃƒÂ³n de las seÃƒÂ±ales D a las entradas de los biestables D
         d00: biestableD port map(D => muxout0_0, clk => clk, Q => Q0_0, QN => QN0_0);
         d01: biestableD port map(D => muxout0_1, clk => clk, Q => Q0_1, QN => QN0_1);
         d02: biestableD port map(D => muxout0_2, clk => clk, Q => Q0_2, QN => QN0_2);

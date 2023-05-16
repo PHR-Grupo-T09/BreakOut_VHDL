@@ -2,8 +2,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity Botones is
-    Port (  buttonIn : in STD_LOGIC;
-            buttonOut : out STD_LOGIC);
+    Port (  buttonIn : inout STD_LOGIC;
+            buttonOut : inout STD_LOGIC);
 end Botones;
 
 architecture Behavioral of Botones is

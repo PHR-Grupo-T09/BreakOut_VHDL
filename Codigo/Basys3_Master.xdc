@@ -7,7 +7,8 @@
 set_property PACKAGE_PIN W5 [get_ports clk]							
 	set_property IOSTANDARD LVCMOS33 [get_ports clk]
 	create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
-	set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets BUTTON_IBUF] 
+	set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets derechaBotIn_IBUF]
+	set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets izquierdaBotIn_IBUF]
 
 ## Switches
 set_property PACKAGE_PIN V17 [get_ports {RESET}]					
@@ -45,12 +46,12 @@ set_property PACKAGE_PIN V17 [get_ports {RESET}]
 
 
 # LEDs
-# set_property PACKAGE_PIN U16 [get_ports {led[0]}]					
-	# set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
-# set_property PACKAGE_PIN E19 [get_ports {led[1]}]					
-	# set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
-# set_property PACKAGE_PIN U19 [get_ports {led[2]}]					
-	# set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+ set_property PACKAGE_PIN U16 [get_ports {RESET1}]					
+	 set_property IOSTANDARD LVCMOS33 [get_ports {RESET1}]
+ set_property PACKAGE_PIN E19 [get_ports {derechaBotOut}]					
+	 set_property IOSTANDARD LVCMOS33 [get_ports {derechaBotOut}]
+ set_property PACKAGE_PIN U19 [get_ports {izquierdaBotOut}]					
+	 set_property IOSTANDARD LVCMOS33 [get_ports {izquierdaBotOut}]
 # set_property PACKAGE_PIN V19 [get_ports {led[3]}]					
 	# set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
 # set_property PACKAGE_PIN W18 [get_ports {led[4]}]					
@@ -293,4 +294,3 @@ set_property PACKAGE_PIN T17 [get_ports derechaBotIn]
 	#set_property IOSTANDARD LVCMOS33 [get_ports {QspiDB[3]}]
 #set_property PACKAGE_PIN K19 [get_ports QspiCSn]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports QspiCSn]
-

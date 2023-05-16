@@ -8,19 +8,17 @@ end Botones;
 
 architecture Behavioral of Botones is
 
-    signal Q, Qn : std_logic;
-
-    component biestableJK is
-            port (
-            status, notStatus : out std_logic;
-            clk, j, k : in std_logic
-        );
-        end component;
 
     begin
-
-        j0: biestableJK port map(status =>Q,notStatus => Qn, clk => buttonIn, j =>'1',k =>'1');
-
-        buttonOut <= Q;
+        process1: process(buttonIn)
+        
+      begin 
+      if(buttonIn = '1') then 
+        buttonOut <=   buttonIn;
+        else 
+        buttonOut <= '0';
+        end if;
+        end process;     
 
 end Behavioral;
+

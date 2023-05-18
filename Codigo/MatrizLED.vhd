@@ -56,6 +56,15 @@ architecture behav of MatrizLED is
             y_o         : out std_logic
         );
     end component;
+    
+    
+    signal clkDiv : std_logic;
+    component DivisorFrecuencia is
+        port (
+            clk100mhz: 	in STD_LOGIC;
+            clkOut:		out STD_LOGIC
+        );
+    end component;
 
     -- BOTONES -------------------------------------------------------------------------
 
@@ -68,6 +77,10 @@ architecture behav of MatrizLED is
 
 
     begin
+    
+        -- DIVISOR FRECUENCIA -----------------------------------------------------------
+        
+        div: DivisorFrecuencia port map ( clk100mhz => clk , clkOut => clkDiv);
 
         -- BOTONES ----------------------------------------------------------------------
 
@@ -220,14 +233,14 @@ architecture behav of MatrizLED is
         -- Biestables D ------------------------------------------------------------------
 
         -- ConexiÃƒÆ’Ã‚Â³n de las seÃƒÆ’Ã‚Â±ales D a las entradas de los biestables D
-        d00: biestableD port map(D => muxout0_0, clk => clk, Q => Q0_0, QN => QN0_0);
-        d01: biestableD port map(D => muxout0_1, clk => clk, Q => Q0_1, QN => QN0_1);
-        d02: biestableD port map(D => muxout0_2, clk => clk, Q => Q0_2, QN => QN0_2);
-        d03: biestableD port map(D => muxout0_3, clk => clk, Q => Q0_3, QN => QN0_3);
-        d04: biestableD port map(D => muxout0_4, clk => clk, Q => Q0_4, QN => QN0_4);
-        d05: biestableD port map(D => muxout0_5, clk => clk, Q => Q0_5, QN => QN0_5);
-        d06: biestableD port map(D => muxout0_6, clk => clk, Q => Q0_6, QN => QN0_6);
-        d07: biestableD port map(D => muxout0_7, clk => clk, Q => Q0_7, QN => QN0_7);
+        d00: biestableD port map(D => muxout0_0, clk => clkDiv, Q => Q0_0, QN => QN0_0);
+        d01: biestableD port map(D => muxout0_1, clk => clkDiv, Q => Q0_1, QN => QN0_1);
+        d02: biestableD port map(D => muxout0_2, clk => clkDiv, Q => Q0_2, QN => QN0_2);
+        d03: biestableD port map(D => muxout0_3, clk => clkDiv, Q => Q0_3, QN => QN0_3);
+        d04: biestableD port map(D => muxout0_4, clk => clkDiv, Q => Q0_4, QN => QN0_4);
+        d05: biestableD port map(D => muxout0_5, clk => clkDiv, Q => Q0_5, QN => QN0_5);
+        d06: biestableD port map(D => muxout0_6, clk => clkDiv, Q => Q0_6, QN => QN0_6);
+        d07: biestableD port map(D => muxout0_7, clk => clkDiv, Q => Q0_7, QN => QN0_7);
         
 --        d10: biestableD port map(D => D1_0, clk => clk, Q => Q1_0, QN => QN1_0);
 --        d11: biestableD port map(D => D1_1, clk => clk, Q => Q1_1, QN => QN1_1);

@@ -1,0 +1,41 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity EncenderLeds is
+ Port (JB0,JB1,JB2,JB3,JB4,JB5,JB6,JB7: out std_logic;
+        JC0,JC1,JC2,JC3,JC4,JC5,JC6,JC7: out std_logic);
+end EncenderLeds;
+
+architecture Behavioral of EncenderLeds is
+
+begin
+JB0<='1';
+JB1 <='1';
+JB2 <='1';
+JB3 <='1';
+JB4<='0';
+JB5 <='0';
+JB6 <='1';
+JB7<='1';
+
+JC0<='1';
+JC1 <='0';
+JC2 <='0';
+JC3 <='0';
+JC4<='1';
+JC5 <='1';
+JC6 <='1';
+JC7<='0';
+
+
+
+end Behavioral;

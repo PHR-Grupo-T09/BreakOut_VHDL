@@ -1,35 +1,14 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 09.05.2023 18:30:53
--- Design Name: 
--- Module Name: DivisorFrecuencia - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
-entity digital_clock_top is
+entity DivisorFrecuencia is
 port (
 	clk100mhz: 	in STD_LOGIC;
-	clk:		out STD_LOGIC
+	clkOut:		out STD_LOGIC
 );
-end digital_clock_top;
+end DivisorFrecuencia;
 
-architecture rtl of digital_clock_top is
+architecture rtl of DivisorFrecuencia is
 	constant max_count: INTEGER := 100000000;
 	signal count: INTEGER range 0 to max_count;
 	signal clk_state: STD_LOGIC := '0';
@@ -49,7 +28,7 @@ begin
 	
 	persecond: process (clk_state)
 	begin
-		clk <= clk_state;
+		clkOut <= clk_state;
 	end process;
 	
 end rtl;

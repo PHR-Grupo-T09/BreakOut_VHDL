@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity EncenderLeds is
- Port ( clk: in std_logic;
+Port ( clk: in std_logic;
         J0,J1,J2,J3,J4,J5,J6,J7: out std_logic;
         J8,J9,J10,J11,J12,J13,J14,J15: out std_logic);
 end EncenderLeds;

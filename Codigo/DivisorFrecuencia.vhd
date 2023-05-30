@@ -9,7 +9,7 @@ port (
 end DivisorFrecuencia;
 
 architecture rtl of DivisorFrecuencia is
-	constant max_count: INTEGER := 100000000;
+	constant max_count: INTEGER := 100000;
 	signal count: INTEGER range 0 to max_count - 1;
 	signal clk_state: STD_LOGIC := '0';
 	

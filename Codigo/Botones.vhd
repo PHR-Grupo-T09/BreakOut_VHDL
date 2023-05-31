@@ -14,7 +14,7 @@ architecture Behavioral of Botones is
         
       begin 
       if(buttonIn = '1') then 
-        buttonOut <=   buttonIn;
+        buttonOut <=   '1';
         else 
         buttonOut <= '0';
         end if;

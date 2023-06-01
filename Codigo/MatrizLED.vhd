@@ -4,9 +4,9 @@ use IEEE.std_logic_1164.all;
 
 entity MatrizLED is
 port (
-    izquierdaBotIn, izquierdaBotOut : inout std_logic;
-    derechaBotIn, derechaBotOut : inout std_logic;
-    RESET, RESET1 : inout std_logic;
+    izquierda, izquierdaOut : inout std_logic;
+    derecha, derechaOut : inout std_logic;
+    RESET, RESETOUT : inout std_logic;
     clk : in std_logic;
     Q0_0, Q0_1, Q0_2, Q0_3, Q0_4, Q0_5, Q0_6, Q0_7 : inout std_logic;
     Q1_0, Q1_1, Q1_2, Q1_3, Q1_4, Q1_5, Q1_6, Q1_7 : inout std_logic;
@@ -66,14 +66,14 @@ architecture behav of MatrizLED is
         );
     end component;
 
-    -- BOTONES -------------------------------------------------------------------------
+--    -- BOTONES -------------------------------------------------------------------------
 
-    component Botones is
-        port(
-            buttonIn : inout STD_LOGIC;
-            buttonOut : inout STD_LOGIC
-        );
-        end component;
+--    component Botones is
+--        port(
+--            buttonIn : inout STD_LOGIC;
+--            buttonOut : inout STD_LOGIC
+--        );
+--        end component;
 
 
     begin
@@ -84,24 +84,60 @@ architecture behav of MatrizLED is
 
         -- BOTONES ----------------------------------------------------------------------
 
-        -- Boton Izquierda -- W19
+--        -- Boton Izquierda -- W19
 
-        botonIzquierda: Botones port map(buttonIn => izquierdaBotIn, buttonOut => izquierdaBotOut);
+--        botonIzquierda: Botones port map(buttonIn => izquierdaBotIn, buttonOut => izquierdaBotOut);
         
-        -- Boton Derecha -- T17
+--        -- Boton Derecha -- T17
 
-        botonDerecha: Botones port map(buttonIn => derechaBotIn, buttonOut => derechaBotOut);
+--        botonDerecha: Botones port map(buttonIn => derechaBotIn, buttonOut => derechaBotOut);
 
 
         -- MUX --------------------------------------------------------------------------
         
+        Mux0_0: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_0, sel_i => mux_sel, ena_i => enable, y_o => muxout0_0);
+        Mux0_1: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_1, sel_i => mux_sel, ena_i => enable, y_o => muxout0_1);
+        Mux0_2: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_2, sel_i => mux_sel, ena_i => enable, y_o => muxout0_2);
+        Mux0_3: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_3, sel_i => mux_sel, ena_i => enable, y_o => muxout0_3);
+        Mux0_4: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_4, sel_i => mux_sel, ena_i => enable, y_o => muxout0_4);
+        Mux0_5: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_5, sel_i => mux_sel, ena_i => enable, y_o => muxout0_5);        
+        Mux0_6: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_6, sel_i => mux_sel, ena_i => enable, y_o => muxout0_6);
+        Mux0_7: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in0_7, sel_i => mux_sel, ena_i => enable, y_o => muxout0_7);
+        
+        -- Bies D -------------------------------------------------------------------------
+        
+        d00: biestableD port map(D => muxout0_0, clk => clkDiv, Q => Q0_0, QN => QN0_0);
+        d01: biestableD port map(D => muxout0_1, clk => clkDiv, Q => Q0_1, QN => QN0_1);
+        d02: biestableD port map(D => muxout0_2, clk => clkDiv, Q => Q0_2, QN => QN0_2);
+        d03: biestableD port map(D => muxout0_3, clk => clkDiv, Q => Q0_3, QN => QN0_3);
+        d04: biestableD port map(D => muxout0_4, clk => clkDiv, Q => Q0_4, QN => QN0_4);
+        d05: biestableD port map(D => muxout0_5, clk => clkDiv, Q => Q0_5, QN => QN0_5);
+        d06: biestableD port map(D => muxout0_6, clk => clkDiv, Q => Q0_6, QN => QN0_6);
+        d07: biestableD port map(D => muxout0_7, clk => clkDiv, Q => Q0_7, QN => QN0_7);
+        
+        
         -- Entradas de seleccion para todos los mux
         
+       
         
-        RESET1 <= RESET;
-        mux_sel(0) <= RESET;                -- Inicial      001
-        mux_sel(1) <= derechaBotOut;        -- Derecha      010
-        mux_sel(2) <= izquierdaBotOut;      -- Izquierda    100
+        
+        RESETOUT <= RESET;
+        derechaOut <= derecha;
+        izquierdaOut <= izquierda;
+        
+        mux_sel(0) <= RESET;
+        mux_sel(1) <= derecha;
+        mux_sel(2) <= izquierda;
+        
+        
 
         -- Enable general a todos los MUX
 
@@ -120,8 +156,7 @@ architecture behav of MatrizLED is
         mux_in0_0(2) <= '0';    -- 01 0 
         mux_in0_0(4) <= Q0_1;   -- 10 0
 
-        Mux0_0: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_0, sel_i => mux_sel, ena_i => enable, y_o => muxout0_0);
+
 
         -- Mux 0_1
             
@@ -135,8 +170,7 @@ architecture behav of MatrizLED is
         mux_in0_1(2) <= Q0_0;  -- 01 0 
         mux_in0_1(4) <= Q0_2;  -- 10 0
 
-        Mux0_1: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_1, sel_i => mux_sel, ena_i => enable, y_o => muxout0_1);
+
 
         -- Mux 0_2
 
@@ -150,8 +184,7 @@ architecture behav of MatrizLED is
         mux_in0_2(2) <= Q0_1;  -- 01 0 
         mux_in0_2(4) <= Q0_3;  -- 10 0 
 
-        Mux0_2: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_2, sel_i => mux_sel, ena_i => enable, y_o => muxout0_2);
+
 
         -- Mux 0_3
             
@@ -165,8 +198,7 @@ architecture behav of MatrizLED is
         mux_in0_3(2) <= Q0_2;  -- 01 0 
         mux_in0_3(4) <= Q0_4;  -- 10 0
 
-        Mux0_3: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_3, sel_i => mux_sel, ena_i => enable, y_o => muxout0_3);
+
 
         -- Mux 0_4
 
@@ -180,8 +212,7 @@ architecture behav of MatrizLED is
         mux_in0_4(2) <= Q0_3;  -- 01 0 
         mux_in0_4(4) <= Q0_5;  -- 10 0
 
-        Mux0_4: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_4, sel_i => mux_sel, ena_i => enable, y_o => muxout0_4);
+
 
         -- Mux 0_5
 
@@ -195,8 +226,7 @@ architecture behav of MatrizLED is
         mux_in0_5(2) <= Q0_4;  -- 01 0 
         mux_in0_5(4) <= Q0_6;  -- 10 0 
 
-        Mux0_5: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_5, sel_i => mux_sel, ena_i => enable, y_o => muxout0_5);
+
 
         -- Mux 0_6
 
@@ -210,8 +240,7 @@ architecture behav of MatrizLED is
         mux_in0_6(2) <= Q0_5;  -- 01 0
         mux_in0_6(4) <= Q0_7;  -- 10 0
 
-        Mux0_6: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_6, sel_i => mux_sel, ena_i => enable, y_o => muxout0_6);
+
 
         -- Mux 0_7
 
@@ -225,22 +254,14 @@ architecture behav of MatrizLED is
         mux_in0_7(2) <= Q0_6;  -- 01 0
         mux_in0_7(4) <= '0';   -- 10 0
 
-        Mux0_7: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_7, sel_i => mux_sel, ena_i => enable, y_o => muxout0_7);
+
 
 
 
         -- Biestables D ------------------------------------------------------------------
 
-        -- ConexiÃƒÆ’Ã‚Â³n de las seÃƒÆ’Ã‚Â±ales D a las entradas de los biestables D
-        d00: biestableD port map(D => muxout0_0, clk => clkDiv, Q => Q0_0, QN => QN0_0);
-        d01: biestableD port map(D => muxout0_1, clk => clkDiv, Q => Q0_1, QN => QN0_1);
-        d02: biestableD port map(D => muxout0_2, clk => clkDiv, Q => Q0_2, QN => QN0_2);
-        d03: biestableD port map(D => muxout0_3, clk => clkDiv, Q => Q0_3, QN => QN0_3);
-        d04: biestableD port map(D => muxout0_4, clk => clkDiv, Q => Q0_4, QN => QN0_4);
-        d05: biestableD port map(D => muxout0_5, clk => clkDiv, Q => Q0_5, QN => QN0_5);
-        d06: biestableD port map(D => muxout0_6, clk => clkDiv, Q => Q0_6, QN => QN0_6);
-        d07: biestableD port map(D => muxout0_7, clk => clkDiv, Q => Q0_7, QN => QN0_7);
+        -- ConexiÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n de las seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±ales D a las entradas de los biestables D
+
         
 --        d10: biestableD port map(D => D1_0, clk => clk, Q => Q1_0, QN => QN1_0);
 --        d11: biestableD port map(D => D1_1, clk => clk, Q => Q1_1, QN => QN1_1);

@@ -32,9 +32,9 @@ signal i: integer := 0;
 
 component MatrizLED is
 port (
-    izquierdaBotIn, izquierdaBotOut : inout std_logic;
-    derechaBotIn, derechaBotOut : inout std_logic;
-    RESET, RESET1 : inout std_logic;
+    izquierda, izquierdaOut : inout std_logic;
+    derecha, derechaOut : inout std_logic;
+    RESET, RESETOUT : inout std_logic;
     clk : in std_logic;
     Q0_0, Q0_1, Q0_2, Q0_3, Q0_4, Q0_5, Q0_6, Q0_7 : inout std_logic;
     Q1_0, Q1_1, Q1_2, Q1_3, Q1_4, Q1_5, Q1_6, Q1_7 : inout std_logic;
@@ -65,7 +65,7 @@ end component;
 
 begin
     
-    MatrizLED_inst: MatrizLED port map (izquierdaBotIn => izquierdaBotInLeds, izquierdaBotOut => izquierdaBotOutLeds, derechaBotIn => derechaBotInLeds, derechaBotOut => derechaBotOutLeds, RESET => RESETLeds, RESET1 => RESET1Leds, clk => clk,
+    MatrizLED_inst: MatrizLED port map (izquierda => izquierdaBotInLeds, izquierdaOut => izquierdaBotOutLeds, derecha => derechaBotInLeds, derechaOut => derechaBotOutLeds, RESET => RESETLeds, RESETOUT => RESET1Leds, clk => clk,
                     Q0_0 => Q_0_0, Q0_1 => Q_0_1, Q0_2 => Q_0_2, Q0_3 => Q_0_3, Q0_4 => Q_0_4, Q0_5 => Q_0_5, Q0_6 => Q_0_6, Q0_7 => Q_0_7,
                     Q1_0 => Q_1_0, Q1_1 => Q_1_1, Q1_2 => Q_1_2, Q1_3 => Q_1_3, Q1_4 => Q_1_4, Q1_5 => Q_1_5, Q1_6 => Q_1_6, Q1_7 => Q_1_7,
                     Q2_0 => Q_2_0, Q2_1 => Q_2_1, Q2_2 => Q_2_2, Q2_3 => Q_2_3, Q2_4 => Q_2_4, Q2_5 => Q_2_5, Q2_6 => Q_2_6, Q2_7 => Q_2_7,

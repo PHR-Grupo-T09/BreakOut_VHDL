@@ -14,15 +14,17 @@ begin
 
 process(clk)
 begin
-    if (D = '0' and clk = '1') then
-        Q <= '0';
-    elsif (D = '1' and clk = '1') then
-        Q <= '1';
+    if rising_edge(clk) then
+        if D = '0' then
+            Q <= '0';
+        elsif D = '1' then
+            Q <= '1';
+        end if;
     end if;
-    
-    QN <= NOT Q;
-    
-    end process;
+
+    QN <= not Q;
+end process;
+
     
     -- i1 <= '0' WHEN D = '0' and clk'event and clk = '1' else
           -- '1' WHEN D = '1' and clk'event and clk = '1';

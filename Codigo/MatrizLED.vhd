@@ -90,9 +90,12 @@ architecture behav of MatrizLED is
         div: DivisorFrecuencia port map ( clk100mhz => clk , clkOut => clkDiv);
 
 
----------- Filas de movimiento (fila 0 y fila 1) -------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------        
+---------- ZONA 1 --------------------------------------------------------------------------------------
+---------- Filas de movimiento (fila 0 y fila 1) -------------------------------------------------------
         
-        -- FILA 0 --------------------------------------------------------------------------
+        -- FILA 0 --------------------------------------------------------------------------------------
 
         -- MUX 0
 
@@ -340,9 +343,9 @@ architecture behav of MatrizLED is
 
 
 
-
-
----------- Columnas de Disparo (a partir de la fila 2) --------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+---------- ZONA 2 --------------------------------------------------------------------------------------
+---------- Columnas Solo de Disparo (Fila 2 - Fila 4) --------------------------------------------------
 
         -- Columna 0 ------------------------------------------------------------------------------------
         
@@ -351,9 +354,9 @@ architecture behav of MatrizLED is
         d20: biestableD port map(D => inicioDisparo0, clk => clkDiv, Q => Q2_0, QN => QN2_0);
         d30: biestableD port map(D => Q2_0, clk => clkDiv, Q => Q3_0, QN => QN3_0);
         d40: biestableD port map(D => Q3_0, clk => clkDiv, Q => Q4_0, QN => QN4_0);
-        d50: biestableD port map(D => Q4_0, clk => clkDiv, Q => Q5_0, QN => QN5_0);
-        d60: biestableD port map(D => Q5_0, clk => clkDiv, Q => Q6_0, QN => QN6_0);
-        d70: biestableD port map(D => Q6_0, clk => clkDiv, Q => Q7_0, QN => QN7_0);
+        --d50: biestableD port map(D => Q4_0, clk => clkDiv, Q => Q5_0, QN => QN5_0);
+        --d60: biestableD port map(D => Q5_0, clk => clkDiv, Q => Q6_0, QN => QN6_0);
+        --d70: biestableD port map(D => Q6_0, clk => clkDiv, Q => Q7_0, QN => QN7_0);
         
         -- Columna 1 ------------------------------------------------------------------------------------
         
@@ -362,9 +365,9 @@ architecture behav of MatrizLED is
         d21: biestableD port map(D => inicioDisparo1, clk => clkDiv, Q => Q2_1, QN => QN2_1);
         d31: biestableD port map(D => Q2_1, clk => clkDiv, Q => Q3_1, QN => QN3_1);
         d41: biestableD port map(D => Q3_1, clk => clkDiv, Q => Q4_1, QN => QN4_1);
-        d51: biestableD port map(D => Q4_1, clk => clkDiv, Q => Q5_1, QN => QN5_1);
-        d61: biestableD port map(D => Q5_1, clk => clkDiv, Q => Q6_1, QN => QN6_1);
-        d71: biestableD port map(D => Q6_1, clk => clkDiv, Q => Q7_1, QN => QN7_1);
+        --d51: biestableD port map(D => Q4_1, clk => clkDiv, Q => Q5_1, QN => QN5_1);
+        --d61: biestableD port map(D => Q5_1, clk => clkDiv, Q => Q6_1, QN => QN6_1);
+        --d71: biestableD port map(D => Q6_1, clk => clkDiv, Q => Q7_1, QN => QN7_1);
 
         -- Columna 2 ------------------------------------------------------------------------------------
         
@@ -373,9 +376,9 @@ architecture behav of MatrizLED is
         d22: biestableD port map(D => inicioDisparo2, clk => clkDiv, Q => Q2_2, QN => QN2_1);
         d32: biestableD port map(D => Q2_2, clk => clkDiv, Q => Q3_2, QN => QN3_2);
         d42: biestableD port map(D => Q3_2, clk => clkDiv, Q => Q4_2, QN => QN4_2);
-        d52: biestableD port map(D => Q4_2, clk => clkDiv, Q => Q5_2, QN => QN5_2);
-        d62: biestableD port map(D => Q5_2, clk => clkDiv, Q => Q6_2, QN => QN6_2);
-        d72: biestableD port map(D => Q6_2, clk => clkDiv, Q => Q7_2, QN => QN7_2);
+        --d52: biestableD port map(D => Q4_2, clk => clkDiv, Q => Q5_2, QN => QN5_2);
+        --d62: biestableD port map(D => Q5_2, clk => clkDiv, Q => Q6_2, QN => QN6_2);
+        --d72: biestableD port map(D => Q6_2, clk => clkDiv, Q => Q7_2, QN => QN7_2);
         
         -- Columna 3 ------------------------------------------------------------------------------------
                 
@@ -384,9 +387,9 @@ architecture behav of MatrizLED is
         d23: biestableD port map(D => inicioDisparo3, clk => clkDiv, Q => Q2_3, QN => QN2_3);
         d33: biestableD port map(D => Q2_3, clk => clkDiv, Q => Q3_3, QN => QN3_3);
         d43: biestableD port map(D => Q3_3, clk => clkDiv, Q => Q4_3, QN => QN4_3);
-        d53: biestableD port map(D => Q4_3, clk => clkDiv, Q => Q5_3, QN => QN5_3);
-        d63: biestableD port map(D => Q5_3, clk => clkDiv, Q => Q6_3, QN => QN6_3);
-        d73: biestableD port map(D => Q6_3, clk => clkDiv, Q => Q7_3, QN => QN7_3);
+        --d53: biestableD port map(D => Q4_3, clk => clkDiv, Q => Q5_3, QN => QN5_3);
+        --d63: biestableD port map(D => Q5_3, clk => clkDiv, Q => Q6_3, QN => QN6_3);
+        --d73: biestableD port map(D => Q6_3, clk => clkDiv, Q => Q7_3, QN => QN7_3);
     
         -- Columna 4 ------------------------------------------------------------------------------------
         
@@ -395,9 +398,9 @@ architecture behav of MatrizLED is
         d24: biestableD port map(D => inicioDisparo4, clk => clkDiv, Q => Q2_4, QN => QN2_4);
         d34: biestableD port map(D => Q2_4, clk => clkDiv, Q => Q3_4, QN => QN3_4);
         d44: biestableD port map(D => Q3_4, clk => clkDiv, Q => Q4_4, QN => QN4_4);
-        d54: biestableD port map(D => Q4_4, clk => clkDiv, Q => Q5_4, QN => QN5_4);
-        d64: biestableD port map(D => Q5_4, clk => clkDiv, Q => Q6_4, QN => QN6_4);
-        d74: biestableD port map(D => Q6_4, clk => clkDiv, Q => Q7_4, QN => QN7_4);
+        --d54: biestableD port map(D => Q4_4, clk => clkDiv, Q => Q5_4, QN => QN5_4);
+        --d64: biestableD port map(D => Q5_4, clk => clkDiv, Q => Q6_4, QN => QN6_4);
+        --d74: biestableD port map(D => Q6_4, clk => clkDiv, Q => Q7_4, QN => QN7_4);
         
         -- Columna 5 ------------------------------------------------------------------------------------
         
@@ -406,9 +409,9 @@ architecture behav of MatrizLED is
         d25: biestableD port map(D => inicioDisparo5, clk => clkDiv, Q => Q2_5, QN => QN2_5);
         d35: biestableD port map(D => Q2_5, clk => clkDiv, Q => Q3_5, QN => QN3_5);
         d45: biestableD port map(D => Q3_5, clk => clkDiv, Q => Q4_5, QN => QN4_5);
-        d55: biestableD port map(D => Q4_5, clk => clkDiv, Q => Q5_5, QN => QN5_5);
-        d65: biestableD port map(D => Q5_5, clk => clkDiv, Q => Q6_5, QN => QN6_5);
-        d75: biestableD port map(D => Q6_5, clk => clkDiv, Q => Q7_5, QN => QN7_5);
+        --d55: biestableD port map(D => Q4_5, clk => clkDiv, Q => Q5_5, QN => QN5_5);
+        --d65: biestableD port map(D => Q5_5, clk => clkDiv, Q => Q6_5, QN => QN6_5);
+        --d75: biestableD port map(D => Q6_5, clk => clkDiv, Q => Q7_5, QN => QN7_5);
         
         -- Columna 6 ------------------------------------------------------------------------------------
                 
@@ -417,9 +420,9 @@ architecture behav of MatrizLED is
         d26: biestableD port map(D => inicioDisparo6, clk => clkDiv, Q => Q2_6, QN => QN2_6);
         d36: biestableD port map(D => Q2_6, clk => clkDiv, Q => Q3_6, QN => QN3_6);
         d46: biestableD port map(D => Q3_6, clk => clkDiv, Q => Q4_6, QN => QN4_6);
-        d56: biestableD port map(D => Q4_6, clk => clkDiv, Q => Q5_6, QN => QN5_6);
-        d66: biestableD port map(D => Q5_6, clk => clkDiv, Q => Q6_6, QN => QN6_6);
-        d76: biestableD port map(D => Q6_6, clk => clkDiv, Q => Q7_6, QN => QN7_6);
+        --d56: biestableD port map(D => Q4_6, clk => clkDiv, Q => Q5_6, QN => QN5_6);
+        --d66: biestableD port map(D => Q5_6, clk => clkDiv, Q => Q6_6, QN => QN6_6);
+        --d76: biestableD port map(D => Q6_6, clk => clkDiv, Q => Q7_6, QN => QN7_6);
         
         -- Columna 7 ------------------------------------------------------------------------------------
                 
@@ -428,9 +431,9 @@ architecture behav of MatrizLED is
         d27: biestableD port map(D => inicioDisparo7, clk => clkDiv, Q => Q2_7, QN => QN2_7);
         d37: biestableD port map(D => Q2_7, clk => clkDiv, Q => Q3_7, QN => QN3_7);
         d47: biestableD port map(D => Q3_7, clk => clkDiv, Q => Q4_7, QN => QN4_7);
-        d57: biestableD port map(D => Q4_7, clk => clkDiv, Q => Q5_7, QN => QN5_7);
-        d67: biestableD port map(D => Q5_7, clk => clkDiv, Q => Q6_7, QN => QN6_7);
-        d77: biestableD port map(D => Q6_7, clk => clkDiv, Q => Q7_7, QN => QN7_7);
+        --d57: biestableD port map(D => Q4_7, clk => clkDiv, Q => Q5_7, QN => QN5_7);
+        --d67: biestableD port map(D => Q5_7, clk => clkDiv, Q => Q6_7, QN => QN6_7);
+        --d77: biestableD port map(D => Q6_7, clk => clkDiv, Q => Q7_7, QN => QN7_7);
 
 
 end behav;

@@ -72,6 +72,12 @@ architecture behav of MatrizLED is
         );
     end component;
 
+    signal botonOut : std_logic;
+    component Botones is
+        Port (  buttonIn : inout STD_LOGIC;
+                buttonOut : inout STD_LOGIC);
+    end component;
+
 
     signal inicioDisparo0, inicioDisparo1, inicioDisparo2, inicioDisparo3, inicioDisparo4, inicioDisparo5, inicioDisparo6, inicioDisparo7 : std_logic;
     
@@ -84,6 +90,10 @@ architecture behav of MatrizLED is
         RESETOUT <= RESET;
         derechaOut <= derecha;
         izquierdaOut <= izquierda;
+
+        -- BOTON ------------------------------------------------------------------------
+        
+        boton: Botones port map ( buttonIn => disparoIn , buttonOut => botonOut);
 
         -- DIVISOR FRECUENCIA -----------------------------------------------------------
         
@@ -349,7 +359,7 @@ architecture behav of MatrizLED is
 
         -- Columna 0 ------------------------------------------------------------------------------------
         
-        inicioDisparo0 <= (Q1_0 and derecha and izquierda) or (Q1_0 and disparoIn);
+        inicioDisparo0 <= (Q1_0 and derecha and izquierda) or (Q1_0 and botonOut);
         
         d20: biestableD port map(D => inicioDisparo0, clk => clkDiv, Q => Q2_0, QN => QN2_0);
         d30: biestableD port map(D => Q2_0, clk => clkDiv, Q => Q3_0, QN => QN3_0);
@@ -360,7 +370,7 @@ architecture behav of MatrizLED is
         
         -- Columna 1 ------------------------------------------------------------------------------------
         
-        inicioDisparo1 <= (Q1_1 and derecha and izquierda) or (Q1_1 and disparoIn);
+        inicioDisparo1 <= (Q1_1 and derecha and izquierda) or (Q1_1 and botonOut);
         
         d21: biestableD port map(D => inicioDisparo1, clk => clkDiv, Q => Q2_1, QN => QN2_1);
         d31: biestableD port map(D => Q2_1, clk => clkDiv, Q => Q3_1, QN => QN3_1);
@@ -371,7 +381,7 @@ architecture behav of MatrizLED is
 
         -- Columna 2 ------------------------------------------------------------------------------------
         
-        inicioDisparo2 <= (Q1_2 and derecha and izquierda) or (Q1_2 and disparoIn);
+        inicioDisparo2 <= (Q1_2 and derecha and izquierda) or (Q1_2 and botonOut);
                 
         d22: biestableD port map(D => inicioDisparo2, clk => clkDiv, Q => Q2_2, QN => QN2_1);
         d32: biestableD port map(D => Q2_2, clk => clkDiv, Q => Q3_2, QN => QN3_2);
@@ -382,7 +392,7 @@ architecture behav of MatrizLED is
         
         -- Columna 3 ------------------------------------------------------------------------------------
                 
-        inicioDisparo3 <= (Q1_3 and derecha and izquierda) or (Q1_3 and disparoIn);
+        inicioDisparo3 <= (Q1_3 and derecha and izquierda) or (Q1_3 and botonOut);
         
         d23: biestableD port map(D => inicioDisparo3, clk => clkDiv, Q => Q2_3, QN => QN2_3);
         d33: biestableD port map(D => Q2_3, clk => clkDiv, Q => Q3_3, QN => QN3_3);
@@ -393,7 +403,7 @@ architecture behav of MatrizLED is
     
         -- Columna 4 ------------------------------------------------------------------------------------
         
-        inicioDisparo4 <= (Q1_4 and derecha and izquierda) or (Q1_4 and disparoIn);
+        inicioDisparo4 <= (Q1_4 and derecha and izquierda) or (Q1_4 and botonOut);
         
         d24: biestableD port map(D => inicioDisparo4, clk => clkDiv, Q => Q2_4, QN => QN2_4);
         d34: biestableD port map(D => Q2_4, clk => clkDiv, Q => Q3_4, QN => QN3_4);
@@ -404,7 +414,7 @@ architecture behav of MatrizLED is
         
         -- Columna 5 ------------------------------------------------------------------------------------
         
-        inicioDisparo5 <= (Q1_5 and derecha and izquierda) or (Q1_5 and disparoIn);
+        inicioDisparo5 <= (Q1_5 and derecha and izquierda) or (Q1_5 and botonOut);
                 
         d25: biestableD port map(D => inicioDisparo5, clk => clkDiv, Q => Q2_5, QN => QN2_5);
         d35: biestableD port map(D => Q2_5, clk => clkDiv, Q => Q3_5, QN => QN3_5);
@@ -415,7 +425,7 @@ architecture behav of MatrizLED is
         
         -- Columna 6 ------------------------------------------------------------------------------------
                 
-        inicioDisparo6 <= (Q1_6 and derecha and izquierda) or (Q1_6 and disparoIn);
+        inicioDisparo6 <= (Q1_6 and derecha and izquierda) or (Q1_6 and botonOut);
                 
         d26: biestableD port map(D => inicioDisparo6, clk => clkDiv, Q => Q2_6, QN => QN2_6);
         d36: biestableD port map(D => Q2_6, clk => clkDiv, Q => Q3_6, QN => QN3_6);
@@ -426,7 +436,7 @@ architecture behav of MatrizLED is
         
         -- Columna 7 ------------------------------------------------------------------------------------
                 
-        inicioDisparo7 <= (Q1_7 and derecha and izquierda) or (Q1_7 and disparoIn);
+        inicioDisparo7 <= (Q1_7 and derecha and izquierda) or (Q1_7 and botonOut);
                 
         d27: biestableD port map(D => inicioDisparo7, clk => clkDiv, Q => Q2_7, QN => QN2_7);
         d37: biestableD port map(D => Q2_7, clk => clkDiv, Q => Q3_7, QN => QN3_7);

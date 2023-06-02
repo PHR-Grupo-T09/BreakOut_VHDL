@@ -9,9 +9,6 @@ Port (
         derechaBotInLeds, derechaBotOutLeds : inout std_logic;
 
         clk: in std_logic;
-        
-        Q_1_0, Q_1_1, Q_1_2, Q_1_3, Q_1_4, Q_1_5, Q_1_6, Q_1_7 : inout std_logic;
-
 
         J0,J1,J2,J3,J4,J5,J6,J7: out std_logic;
         J8,J9,J10,J11,J12,J13,J14,J15: out std_logic
@@ -23,7 +20,7 @@ architecture Behavioral of EncenderLeds is
 signal i: integer := 0;
 
 signal  Q_0_0, Q_0_1, Q_0_2, Q_0_3, Q_0_4, Q_0_5, Q_0_6, Q_0_7 : std_logic;
---signal  Q_1_0, Q_1_1, Q_1_2, Q_1_3, Q_1_4, Q_1_5, Q_1_6, Q_1_7 : std_logic;
+signal  Q_1_0, Q_1_1, Q_1_2, Q_1_3, Q_1_4, Q_1_5, Q_1_6, Q_1_7 : std_logic;
 signal  Q_2_0, Q_2_1, Q_2_2, Q_2_3, Q_2_4, Q_2_5, Q_2_6, Q_2_7 : std_logic;
 signal  Q_3_0, Q_3_1, Q_3_2, Q_3_3, Q_3_4, Q_3_5, Q_3_6, Q_3_7 : std_logic;
 signal  Q_4_0, Q_4_1, Q_4_2, Q_4_3, Q_4_4, Q_4_5, Q_4_6, Q_4_7 : std_logic;

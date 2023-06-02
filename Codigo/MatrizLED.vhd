@@ -92,7 +92,7 @@ architecture behav of MatrizLED is
         -- MUX 0
 
         Mux0_0: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in0_0, sel_i => mux_sel0, ena_i => enable, y_o => muxout1_0);
+        port map(i_i => mux_in0_0, sel_i => mux_sel0, ena_i => enable, y_o => muxout0_0);
         Mux0_1: MUX_Generico generic map(N => 3)
         port map(i_i => mux_in0_1, sel_i => mux_sel0, ena_i => enable, y_o => muxout0_1);
         Mux0_2: MUX_Generico generic map(N => 3)
@@ -217,22 +217,22 @@ architecture behav of MatrizLED is
 
         -- MUX 1
 
-        Mux0_0: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_0, sel_i => mux_sel, ena_i => enable, y_o => muxout1_0);
-        Mux0_1: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_1, sel_i => mux_sel, ena_i => enable, y_o => muxout1_1);
-        Mux0_2: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_2, sel_i => mux_sel, ena_i => enable, y_o => muxout1_2);
-        Mux0_3: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_3, sel_i => mux_sel, ena_i => enable, y_o => muxout1_3);
-        Mux0_4: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_4, sel_i => mux_sel, ena_i => enable, y_o => muxout1_4);
-        Mux0_5: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_5, sel_i => mux_sel, ena_i => enable, y_o => muxout1_5);        
-        Mux0_6: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_6, sel_i => mux_sel, ena_i => enable, y_o => muxout1_6);
-        Mux0_7: MUX_Generico generic map(N => 3)
-        port map(i_i => mux_in1_7, sel_i => mux_sel, ena_i => enable, y_o => muxout1_7);
+        Mux1_0: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_0, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_0);
+        Mux1_1: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_1, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_1);
+        Mux1_2: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_2, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_2);
+        Mux1_3: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_3, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_3);
+        Mux1_4: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_4, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_4);
+        Mux1_5: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_5, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_5);        
+        Mux1_6: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_6, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_6);
+        Mux1_7: MUX_Generico generic map(N => 3)
+        port map(i_i => mux_in1_7, sel_i => mux_sel1, ena_i => enable, y_o => muxout1_7);
 
         -- Bies D 1
 

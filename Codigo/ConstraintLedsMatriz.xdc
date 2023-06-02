@@ -41,8 +41,8 @@ set_property PACKAGE_PIN V17 [get_ports {RESETLeds}]
 	#set_property IOSTANDARD LVCMOS33 [get_ports {sw[13]}]
 #set_property PACKAGE_PIN T1 [get_ports {sw[14]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {sw[14]}]
-set_property PACKAGE_PIN R2 [get_ports {disparoInLeds}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {disparoInLeds}]
+#set_property PACKAGE_PIN R2 [get_ports {disparoInLeds}]					
+	#set_property IOSTANDARD LVCMOS33 [get_ports {disparoInLeds}]
 
 
 # LEDs
@@ -110,8 +110,8 @@ set_property PACKAGE_PIN U19 [get_ports {izquierdaBotOutLeds}]
 
 
 ##Buttons
-#set_property PACKAGE_PIN U18 [get_ports BUTTON]						
-#	set_property IOSTANDARD LVCMOS33 [get_ports BUTTON]
+set_property PACKAGE_PIN U18 [get_ports disparoInLeds]						
+	set_property IOSTANDARD LVCMOS33 [get_ports disparoInLeds]
 #set_property PACKAGE_PIN T18 [get_ports btnU]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnU]
 #set_property PACKAGE_PIN W19 [get_ports izquierdaBotInLeds]						

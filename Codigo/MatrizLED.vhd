@@ -35,8 +35,8 @@ architecture behav of MatrizLED is
     signal QN6_0, QN6_1, QN6_2, QN6_3, QN6_4, QN6_5, QN6_6, QN6_7 : std_logic;
     signal QN7_0, QN7_1, QN7_2, QN7_3, QN7_4, QN7_5, QN7_6, QN7_7 : std_logic;
     
-    signal Q50 : std_logic;
-    signal Q50_1 : std_logic;
+    signal Q50, Q51, Q52, Q53, Q54, Q55, Q56, Q57 : std_logic;
+    signal Q50_1, Q51_1, Q52_1, Q53_1, Q54_1, Q55_1, Q56_1, Q57_1 : std_logic;
 
     component biestableD is
         port (
@@ -491,92 +491,137 @@ architecture behav of MatrizLED is
         port map(i_i => mux_in5_7, sel_i => mux_sel5_7, ena_i => enable, y_o => muxout5_7);
         
         -- Bies D 1
-         d50: biestableD port map(D => muxout5_0, clk => clkDiv, Q => Q50, QN => QN50);
-         d50_1: biestableD port map(D => disparo50_1, clk => clkDiv, Q => Q50_1, QN => QN50_1);
-         d51: biestableD port map(D => muxout5_1, clk => clkDiv, Q => Q5_1, QN => QN5_1);
-         d52: biestableD port map(D => muxout5_2, clk => clkDiv, Q => Q5_2, QN => QN5_2);
-         d53: biestableD port map(D => muxout5_3, clk => clkDiv, Q => Q5_3, QN => QN5_3);
-         d54: biestableD port map(D => muxout5_4, clk => clkDiv, Q => Q5_4, QN => QN5_4);
-         d55: biestableD port map(D => muxout5_5, clk => clkDiv, Q => Q5_5, QN => QN5_5);
-         d56: biestableD port map(D => muxout5_6, clk => clkDiv, Q => Q5_6, QN => QN5_6);
-         d57: biestableD port map(D => muxout5_7, clk => clkDiv, Q => Q5_7, QN => QN5_7);
+        d50: biestableD port map(D => muxout5_0, clk => clkDiv, Q => Q50, QN => QN50);
+        d51: biestableD port map(D => muxout5_1, clk => clkDiv, Q => Q51, QN => QN51);
+        d52: biestableD port map(D => muxout5_2, clk => clkDiv, Q => Q52, QN => QN52);
+        d53: biestableD port map(D => muxout5_3, clk => clkDiv, Q => Q53, QN => QN53);
+        d54: biestableD port map(D => muxout5_4, clk => clkDiv, Q => Q54, QN => QN54);
+        d55: biestableD port map(D => muxout5_5, clk => clkDiv, Q => Q55, QN => QN55);
+        d56: biestableD port map(D => muxout5_6, clk => clkDiv, Q => Q56, QN => QN56);
+        d57: biestableD port map(D => muxout5_7, clk => clkDiv, Q => Q57, QN => QN57);
+         
+        d50_1: biestableD port map(D => disparo50_1, clk => clkDiv, Q => Q50_1, QN => QN50_1);
+        d51_1: biestableD port map(D => disparo51_1, clk => clkDiv, Q => Q51_1, QN => QN51_1);
+        d52_1: biestableD port map(D => disparo52_1, clk => clkDiv, Q => Q52_1, QN => QN52_1);
+        d53_1: biestableD port map(D => disparo53_1, clk => clkDiv, Q => Q53_1, QN => QN53_1);
+        d54_1: biestableD port map(D => disparo54_1, clk => clkDiv, Q => Q54_1, QN => QN54_1);
+        d55_1: biestableD port map(D => disparo55_1, clk => clkDiv, Q => Q55_1, QN => QN55_1);
+        d56_1: biestableD port map(D => disparo56_1, clk => clkDiv, Q => Q56_1, QN => QN56_1);
+        d57_1: biestableD port map(D => disparo57_1, clk => clkDiv, Q => Q57_1, QN => QN57_1);
+
          
         -- Mux 5_0
-        disparo50 <= Q4_0 and Q5_0;
-        disparo50_1 <= Q4_0 and (not  disparo50);
+        disparo50 <= Q4_0 and Q50;
+        disparo50_1 <= Q4_0 and (not disparo50);
         
         mux_sel5_0(0) <= RESET;
         mux_sel5_0(1) <= disparo50;
-   
-        mux_in5_0(0) <= Q50;   --00
-        mux_in5_0(1) <= '1';    --01 RESET
-        mux_in5_0(2) <= '0';    --10 DISPARO
-        mux_in5_0(3) <= Q50;    --11
+        
+        mux_in5_0(0) <= Q50;   -- 00
+        mux_in5_0(1) <= '1';    -- 01 RESET
+        mux_in5_0(2) <= '0';    -- 10 DISPARO
+        mux_in5_0(3) <= Q50;    -- 11
         
         Q5_0 <= Q50 or Q50_1;
         
         -- Mux 5_1
+        disparo51 <= Q4_1 and Q51;
+        disparo51_1 <= Q4_1 and (not disparo51);
+        
         mux_sel5_1(0) <= RESET;
-        mux_sel5_1(1) <= Q4_1;
-   
-        mux_in5_1(0) <= Q5_1;   --00
-        mux_in5_1(1) <= '1';    --01 RESET
-        mux_in5_1(2) <= '0';    --10 DISPARO
-        mux_in5_1(3) <= Q5_1;    --11
-
+        mux_sel5_1(1) <= disparo51;
+        
+        mux_in5_1(0) <= Q51;   -- 00
+        mux_in5_1(1) <= '1';    -- 01 RESET
+        mux_in5_1(2) <= '0';    -- 10 DISPARO
+        mux_in5_1(3) <= Q51;    -- 11
+        
+        Q5_1 <= Q51 or Q51_1;
+        
         -- Mux 5_2
+        disparo52 <= Q4_2 and Q52;
+        disparo52_1 <= Q4_2 and (not disparo52);
+        
         mux_sel5_2(0) <= RESET;
-        mux_sel5_2(1) <= Q4_2;
-   
-        mux_in5_2(0) <= Q5_2;   --00
-        mux_in5_2(1) <= '1';    --01 RESET
-        mux_in5_2(2) <= '0';    --10 DISPARO
-        mux_in5_2(3) <= Q5_2;    --11
+        mux_sel5_2(1) <= disparo52;
+        
+        mux_in5_2(0) <= Q52;   -- 00
+        mux_in5_2(1) <= '1';    -- 01 RESET
+        mux_in5_2(2) <= '0';    -- 10 DISPARO
+        mux_in5_2(3) <= Q52;    -- 11
+        
+        Q5_2 <= Q52 or Q52_1;
         
         -- Mux 5_3
-        mux_sel5_3(0) <= RESET;
-        mux_sel5_3(1) <= Q4_3;
+        disparo53 <= Q4_3 and Q53;
+        disparo53_1 <= Q4_3 and (not disparo53);
         
-        mux_in5_3(0) <= Q5_3; --00
-        mux_in5_3(1) <= '1'; --01 RESET
-        mux_in5_3(2) <= '0'; --10 DISPARO
-        mux_in5_3(3) <= Q5_3; --11
+        mux_sel5_3(0) <= RESET;
+        mux_sel5_3(1) <= disparo53;
+        
+        mux_in5_3(0) <= Q53;   -- 00
+        mux_in5_3(1) <= '1';    -- 01 RESET
+        mux_in5_3(2) <= '0';    -- 10 DISPARO
+        mux_in5_3(3) <= Q53;    -- 11
+        
+        Q5_3 <= Q53 or Q53_1;
         
         -- Mux 5_4
-        mux_sel5_4(0) <= RESET;
-        mux_sel5_4(1) <= Q4_4;
+        disparo54 <= Q4_4 and Q54;
+        disparo54_1 <= Q4_4 and (not disparo54);
         
-        mux_in5_4(0) <= Q5_4; --00
-        mux_in5_4(1) <= '1'; --01 RESET
-        mux_in5_4(2) <= '0'; --10 DISPARO
-        mux_in5_4(3) <= Q5_4; --11
+        mux_sel5_4(0) <= RESET;
+        mux_sel5_4(1) <= disparo54;
+        
+        mux_in5_4(0) <= Q54;   -- 00
+        mux_in5_4(1) <= '1';    -- 01 RESET
+        mux_in5_4(2) <= '0';    -- 10 DISPARO
+        mux_in5_4(3) <= Q54;    -- 11
+        
+        Q5_4 <= Q54 or Q54_1;
         
         -- Mux 5_5
-        mux_sel5_5(0) <= RESET;
-        mux_sel5_5(1) <= Q4_5;
+        disparo55 <= Q4_5 and Q55;
+        disparo55_1 <= Q4_5 and (not disparo55);
         
-        mux_in5_5(0) <= Q5_5; --00
-        mux_in5_5(1) <= '1'; --01 RESET
-        mux_in5_5(2) <= '0'; --10 DISPARO
-        mux_in5_5(3) <= Q5_5; --11
+        mux_sel5_5(0) <= RESET;
+        mux_sel5_5(1) <= disparo55;
+        
+        mux_in5_5(0) <= Q55;   -- 00
+        mux_in5_5(1) <= '1';    -- 01 RESET
+        mux_in5_5(2) <= '0';    -- 10 DISPARO
+        mux_in5_5(3) <= Q55;    -- 11
+        
+        Q5_5 <= Q55 or Q55_1;
         
         -- Mux 5_6
-        mux_sel5_6(0) <= RESET;
-        mux_sel5_6(1) <= Q4_6;
+        disparo56 <= Q4_6 and Q56;
+        disparo56_1 <= Q4_6 and (not disparo56);
         
-        mux_in5_6(0) <= Q5_6; --00
-        mux_in5_6(1) <= '1'; --01 RESET
-        mux_in5_6(2) <= '0'; --10 DISPARO
-        mux_in5_6(3) <= Q5_6; --11
+        mux_sel5_6(0) <= RESET;
+        mux_sel5_6(1) <= disparo56;
+        
+        mux_in5_6(0) <= Q56;   -- 00
+        mux_in5_6(1) <= '1';    -- 01 RESET
+        mux_in5_6(2) <= '0';    -- 10 DISPARO
+        mux_in5_6(3) <= Q56;    -- 11
+        
+        Q5_6 <= Q56 or Q56_1;
         
         -- Mux 5_7
-        mux_sel5_7(0) <= RESET;
-        mux_sel5_7(1) <= Q4_7;
+        disparo57 <= Q4_7 and Q57;
+        disparo57_1 <= Q4_7 and (not disparo57);
         
-        mux_in5_7(0) <= Q5_7; --00
-        mux_in5_7(1) <= '1'; --01 RESET
-        mux_in5_7(2) <= '0'; --10 DISPARO
-        mux_in5_7(3) <= Q5_7; --11
+        mux_sel5_7(0) <= RESET;
+        mux_sel5_7(1) <= disparo57;
+        
+        mux_in5_7(0) <= Q57;   -- 00
+        mux_in5_7(1) <= '1';    -- 01 RESET
+        mux_in5_7(2) <= '0';    -- 10 DISPARO
+        mux_in5_7(3) <= Q57;    -- 11
+        
+        Q5_7 <= Q57 or Q57_1;
+
 
 
 end behav;

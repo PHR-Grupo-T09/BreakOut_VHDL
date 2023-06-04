@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity EncenderLeds is
-Port (  
+Port (
         disparoInLeds : inout std_logic;
         RESETLeds, RESET1Leds : inout std_logic;
         
@@ -63,6 +63,7 @@ component lineasEncendidas is
             algunoEncendido: out std_logic
         );
 end component;
+
 
 begin
     
@@ -210,11 +211,45 @@ begin
                                     J2 <='1';
                                 end if;
                                 
-                    when 6 =>   J0<='1'; J1 <='0'; J2 <='1'; J3 <='1'; J4<='0'; J5 <='1'; J6 <='0'; J7<='1';
-                                J8 <='0'; J9 <='1'; J10 <='0'; J11 <='1'; J12<='1'; J13 <='1'; J14 <='1'; J15 <='1';
+                    when 6 =>   J0<='1'; J2 <='1'; J3 <='1'; J12 <='1'; J13<='1'; J14 <='1'; J15 <='1'; 
+
+                                if (L1 = '1') then
+                                    J1 <='0';
+
+                                    if (Q_6_0 = '1') then J4  <= '1'; else J4  <= '0'; end if;
+                                    if (Q_6_1 = '1') then J5  <= '1'; else J5  <= '0'; end if;
+                                    if (Q_6_2 = '1') then J6  <= '1'; else J6  <= '0'; end if;
+                                    if (Q_6_3 = '1') then J7  <= '1'; else J7  <= '0'; end if;
+                                    
+                                    if (Q_6_4 = '1') then J8  <= '1'; else J8  <= '0'; end if;
+                                    if (Q_6_5 = '1') then J9  <= '1'; else J9  <= '0'; end if;
+                                    if (Q_6_6 = '1') then J10 <= '1'; else J10 <= '0'; end if;
+                                    if (Q_6_7 = '1') then J11 <= '1'; else J11 <= '0'; end if;
+
                                 
-                    when 7 =>   J0<='0'; J1 <='1'; J2 <='1'; J3 <='1'; J4<='1'; J5 <='0'; J6 <='1'; J7<='0';
-                                J8 <='1'; J9 <='0'; J10 <='1'; J11 <='0'; J12<='1'; J13 <='1'; J14 <='1'; J15 <='1';
+                                else
+                                    J1 <='1';
+                                end if;
+                                
+                    when 7 =>   J1<='1'; J2 <='1'; J3 <='1'; J12 <='1'; J13<='1'; J14 <='1'; J15 <='1'; 
+
+                                if (L0 = '1') then
+                                    J0 <='0';
+
+                                    if (Q_7_0 = '1') then J4  <= '1'; else J4  <= '0'; end if;
+                                    if (Q_7_1 = '1') then J5  <= '1'; else J5  <= '0'; end if;
+                                    if (Q_7_2 = '1') then J6  <= '1'; else J6  <= '0'; end if;
+                                    if (Q_7_3 = '1') then J7  <= '1'; else J7  <= '0'; end if;
+                                    
+                                    if (Q_7_4 = '1') then J8  <= '1'; else J8  <= '0'; end if;
+                                    if (Q_7_5 = '1') then J9  <= '1'; else J9  <= '0'; end if;
+                                    if (Q_7_6 = '1') then J10 <= '1'; else J10 <= '0'; end if;
+                                    if (Q_7_7 = '1') then J11 <= '1'; else J11 <= '0'; end if;
+
+                                
+                                else
+                                    J0 <='1';
+                                end if;
                                 
                     when others =>  J0<='1'; J1 <='1'; J2 <='1'; J3 <='1'; J4<='0'; J5 <='0'; J6 <='0'; J7<='0';
                                     J8 <='0'; J9 <='0'; J10 <='0'; J11 <='0'; J12<='1'; J13 <='1'; J14 <='1'; J15 <='1';

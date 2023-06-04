@@ -485,18 +485,77 @@ architecture behav of MatrizLED is
          d56: biestableD port map(D => muxout5_6, clk => clkDiv, Q => Q5_6, QN => QN5_6);
          d57: biestableD port map(D => muxout5_7, clk => clkDiv, Q => Q5_7, QN => QN5_7);
          
-         
+        -- Mux 5_0
         mux_sel5_0(0) <= RESET;
         mux_sel5_0(1) <= Q4_0;
-         
-         -- Mux 5_0
+   
         mux_in5_0(0) <= Q5_0;   --00
         mux_in5_0(1) <= '1';    --01 RESET
         mux_in5_0(2) <= '0';    --10 DISPARO
         mux_in5_0(3) <= Q5_0;    --11
+        
+        -- Mux 5_1
+        mux_sel5_1(0) <= RESET;
+        mux_sel5_1(1) <= Q4_1;
+   
+        mux_in5_1(0) <= Q5_1;   --00
+        mux_in5_1(1) <= '1';    --01 RESET
+        mux_in5_1(2) <= '0';    --10 DISPARO
+        mux_in5_1(3) <= Q5_1;    --11
 
+        -- Mux 5_2
+        mux_sel5_2(0) <= RESET;
+        mux_sel5_2(1) <= Q4_2;
+   
+        mux_in5_2(0) <= Q5_2;   --00
+        mux_in5_2(1) <= '1';    --01 RESET
+        mux_in5_2(2) <= '0';    --10 DISPARO
+        mux_in5_2(3) <= Q5_2;    --11
         
+        -- Mux 5_3
+        mux_sel5_3(0) <= RESET;
+        mux_sel5_3(1) <= Q4_3;
         
+        mux_in5_3(0) <= Q5_3; --00
+        mux_in5_3(1) <= '1'; --01 RESET
+        mux_in5_3(2) <= '0'; --10 DISPARO
+        mux_in5_3(3) <= Q5_3; --11
         
+        -- Mux 5_4
+        mux_sel5_4(0) <= RESET;
+        mux_sel5_4(1) <= Q4_4;
         
+        mux_in5_4(0) <= Q5_4; --00
+        mux_in5_4(1) <= '1'; --01 RESET
+        mux_in5_4(2) <= '0'; --10 DISPARO
+        mux_in5_4(3) <= Q5_4; --11
+        
+        -- Mux 5_5
+        mux_sel5_5(0) <= RESET;
+        mux_sel5_5(1) <= Q4_5;
+        
+        mux_in5_5(0) <= Q5_5; --00
+        mux_in5_5(1) <= '1'; --01 RESET
+        mux_in5_5(2) <= '0'; --10 DISPARO
+        mux_in5_5(3) <= Q5_5; --11
+        
+        -- Mux 5_6
+        mux_sel5_6(0) <= RESET;
+        mux_sel5_6(1) <= Q4_6;
+        
+        mux_in5_6(0) <= Q5_6; --00
+        mux_in5_6(1) <= '1'; --01 RESET
+        mux_in5_6(2) <= '0'; --10 DISPARO
+        mux_in5_6(3) <= Q5_6; --11
+        
+        -- Mux 5_7
+        mux_sel5_7(0) <= RESET;
+        mux_sel5_7(1) <= Q4_7;
+        
+        mux_in5_7(0) <= Q5_7; --00
+        mux_in5_7(1) <= '1'; --01 RESET
+        mux_in5_7(2) <= '0'; --10 DISPARO
+        mux_in5_7(3) <= Q5_7; --11
+
+
 end behav;

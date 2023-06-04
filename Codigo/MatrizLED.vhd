@@ -571,7 +571,7 @@ architecture behav of MatrizLED is
         mux_sel5_1(1) <= disparo51;
         
         mux_in5_1(0) <= Q51;   -- 00
-        mux_in5_1(1) <= '1';    -- 01 RESET
+        mux_in5_1(1) <= '0';    -- 01 RESET
         mux_in5_1(2) <= '0';    -- 10 DISPARO
         mux_in5_1(3) <= Q51;    -- 11
         
@@ -599,7 +599,7 @@ architecture behav of MatrizLED is
         mux_sel5_3(1) <= disparo53;
         
         mux_in5_3(0) <= Q53;   -- 00
-        mux_in5_3(1) <= '1';    -- 01 RESET
+        mux_in5_3(1) <= '0';    -- 01 RESET
         mux_in5_3(2) <= '0';    -- 10 DISPARO
         mux_in5_3(3) <= Q53;    -- 11
         
@@ -627,7 +627,7 @@ architecture behav of MatrizLED is
         mux_sel5_5(1) <= disparo55;
         
         mux_in5_5(0) <= Q55;   -- 00
-        mux_in5_5(1) <= '1';    -- 01 RESET
+        mux_in5_5(1) <= '0';    -- 01 RESET
         mux_in5_5(2) <= '0';    -- 10 DISPARO
         mux_in5_5(3) <= Q55;    -- 11
         
@@ -655,7 +655,7 @@ architecture behav of MatrizLED is
         mux_sel5_7(1) <= disparo57;
         
         mux_in5_7(0) <= Q57;   -- 00
-        mux_in5_7(1) <= '1';    -- 01 RESET
+        mux_in5_7(1) <= '0';    -- 01 RESET
         mux_in5_7(2) <= '0';    -- 10 DISPARO
         mux_in5_7(3) <= Q57;    -- 11
         
@@ -703,22 +703,22 @@ architecture behav of MatrizLED is
         
         
         -- Mux 6_0
-        disparo60 <= Q5_0 and Q60;
-        disparo60_1 <= Q5_0 and (not disparo60);
+        disparo60 <= Q50_1 and Q60;
+        disparo60_1 <= Q50_1 and (not disparo60);
         
         mux_sel6_0(0) <= RESET;
         mux_sel6_0(1) <= disparo60;
         
         mux_in6_0(0) <= Q60;   -- 00
-        mux_in6_0(1) <= '1';    -- 01 RESET
+        mux_in6_0(1) <= '0';    -- 01 RESET
         mux_in6_0(2) <= '0';    -- 10 DISPARO
         mux_in6_0(3) <= Q60;    -- 11
         
         Q6_0 <= Q60 or Q60_1;
         
         -- Mux 6_1
-        disparo61 <= Q5_1 and Q61;
-        disparo61_1 <= Q5_1 and (not disparo61);
+        disparo61 <= Q51_1 and Q61;
+        disparo61_1 <= Q51_1 and (not disparo61);
         
         mux_sel6_1(0) <= RESET;
         mux_sel6_1(1) <= disparo61;
@@ -731,22 +731,22 @@ architecture behav of MatrizLED is
         Q6_1 <= Q61 or Q61_1;
         
         -- Mux 6_2
-        disparo62 <= Q5_2 and Q62;
-        disparo62_1 <= Q5_2 and (not disparo62);
+        disparo62 <= Q52_1 and Q62;
+        disparo62_1 <= Q52_1 and (not disparo62);
         
         mux_sel6_2(0) <= RESET;
         mux_sel6_2(1) <= disparo62;
         
         mux_in6_2(0) <= Q62;   -- 00
-        mux_in6_2(1) <= '1';    -- 01 RESET
+        mux_in6_2(1) <= '0';    -- 01 RESET
         mux_in6_2(2) <= '0';    -- 10 DISPARO
         mux_in6_2(3) <= Q62;    -- 11
         
         Q6_2 <= Q62 or Q62_1;
         
         -- Mux 6_3
-        disparo63 <= Q5_3 and Q63;
-        disparo63_1 <= Q5_3 and (not disparo63);
+        disparo63 <= Q53_1 and Q63;
+        disparo63_1 <= Q53_1 and (not disparo63);
         
         mux_sel6_3(0) <= RESET;
         mux_sel6_3(1) <= disparo63;
@@ -759,22 +759,22 @@ architecture behav of MatrizLED is
         Q6_3 <= Q63 or Q63_1;
         
         -- Mux 6_4
-        disparo64 <= Q5_4 and Q64;
-        disparo64_1 <= Q5_4 and (not disparo64);
+        disparo64 <= Q54_1 and Q64;
+        disparo64_1 <= Q54_1 and (not disparo64);
         
         mux_sel6_4(0) <= RESET;
         mux_sel6_4(1) <= disparo64;
         
         mux_in6_4(0) <= Q64;   -- 00
-        mux_in6_4(1) <= '1';    -- 01 RESET
+        mux_in6_4(1) <= '0';    -- 01 RESET
         mux_in6_4(2) <= '0';    -- 10 DISPARO
         mux_in6_4(3) <= Q64;    -- 11
         
         Q6_4 <= Q64 or Q64_1;
         
         -- Mux 6_5
-        disparo65 <= Q5_5 and Q65;
-        disparo65_1 <= Q5_5 and (not disparo65);
+        disparo65 <= Q55_1 and Q65;
+        disparo65_1 <= Q55_1 and (not disparo65);
         
         mux_sel6_5(0) <= RESET;
         mux_sel6_5(1) <= disparo65;
@@ -787,22 +787,22 @@ architecture behav of MatrizLED is
         Q6_5 <= Q65 or Q65_1;
         
         -- Mux 6_6
-        disparo66 <= Q5_6 and Q66;
-        disparo66_1 <= Q5_6 and (not disparo66);
+        disparo66 <= Q56_1 and Q66;
+        disparo66_1 <= Q56_1 and (not disparo66);
         
         mux_sel6_6(0) <= RESET;
         mux_sel6_6(1) <= disparo66;
         
         mux_in6_6(0) <= Q66;   -- 00
-        mux_in6_6(1) <= '1';    -- 01 RESET
+        mux_in6_6(1) <= '0';    -- 01 RESET
         mux_in6_6(2) <= '0';    -- 10 DISPARO
         mux_in6_6(3) <= Q66;    -- 11
         
         Q6_6 <= Q66 or Q66_1;
         
         -- Mux 6_7
-        disparo67 <= Q5_7 and Q67;
-        disparo67_1 <= Q5_7 and (not disparo67);
+        disparo67 <= Q57_1 and Q67;
+        disparo67_1 <= Q57_1 and (not disparo67);
         
         mux_sel6_7(0) <= RESET;
         mux_sel6_7(1) <= disparo67;
@@ -815,7 +815,7 @@ architecture behav of MatrizLED is
         Q6_7 <= Q67 or Q67_1;
         
         
-        -- Fila 6 --------------------------------------------------------------------------------------
+        -- Fila 7 --------------------------------------------------------------------------------------
         
         -- MUX 7
         Mux7_0: MUX_Generico generic map(N => 2)
@@ -855,8 +855,8 @@ architecture behav of MatrizLED is
         d77_1: biestableD port map(D => disparo77_1, clk => clkDiv, Q => Q77_1, QN => QN77_1);
         
         -- Mux 7_0
-        disparo70 <= Q6_0 and Q70;
-        disparo70_1 <= Q6_0 and (not disparo70);
+        disparo70 <= Q60_1 and Q70;
+        disparo70_1 <= Q60_1 and (not disparo70);
         
         mux_sel7_0(0) <= RESET;
         mux_sel7_0(1) <= disparo70;
@@ -869,22 +869,22 @@ architecture behav of MatrizLED is
         Q7_0 <= Q70 or Q70_1;
         
         -- Mux 7_1
-        disparo71 <= Q6_1 and Q71;
-        disparo71_1 <= Q6_1 and (not disparo71);
+        disparo71 <= Q61_1 and Q71;
+        disparo71_1 <= Q61_1 and (not disparo71);
         
         mux_sel7_1(0) <= RESET;
         mux_sel7_1(1) <= disparo71;
         
         mux_in7_1(0) <= Q71;   -- 00
-        mux_in7_1(1) <= '1';    -- 01 RESET
+        mux_in7_1(1) <= '0';    -- 01 RESET
         mux_in7_1(2) <= '0';    -- 10 DISPARO
         mux_in7_1(3) <= Q71;    -- 11
         
         Q7_1 <= Q71 or Q71_1;
         
         -- Mux 7_2
-        disparo72 <= Q6_2 and Q72;
-        disparo72_1 <= Q6_2 and (not disparo72);
+        disparo72 <= Q62_1 and Q72;
+        disparo72_1 <= Q62_1 and (not disparo72);
         
         mux_sel7_2(0) <= RESET;
         mux_sel7_2(1) <= disparo72;
@@ -897,22 +897,22 @@ architecture behav of MatrizLED is
         Q7_2 <= Q72 or Q72_1;
         
         -- Mux 7_3
-        disparo73 <= Q6_3 and Q73;
-        disparo73_1 <= Q6_3 and (not disparo73);
+        disparo73 <= Q63_1 and Q73;
+        disparo73_1 <= Q63_1 and (not disparo73);
         
         mux_sel7_3(0) <= RESET;
         mux_sel7_3(1) <= disparo73;
         
         mux_in7_3(0) <= Q73;   -- 00
-        mux_in7_3(1) <= '1';    -- 01 RESET
+        mux_in7_3(1) <= '0';    -- 01 RESET
         mux_in7_3(2) <= '0';    -- 10 DISPARO
         mux_in7_3(3) <= Q73;    -- 11
         
         Q7_3 <= Q73 or Q73_1;
         
         -- Mux 7_4
-        disparo74 <= Q6_4 and Q74;
-        disparo74_1 <= Q6_4 and (not disparo74);
+        disparo74 <= Q64_1 and Q74;
+        disparo74_1 <= Q64_1 and (not disparo74);
         
         mux_sel7_4(0) <= RESET;
         mux_sel7_4(1) <= disparo74;
@@ -925,22 +925,22 @@ architecture behav of MatrizLED is
         Q7_4 <= Q74 or Q74_1;
         
         -- Mux 7_5
-        disparo75 <= Q6_5 and Q75;
-        disparo75_1 <= Q6_5 and (not disparo75);
+        disparo75 <= Q65_1 and Q75;
+        disparo75_1 <= Q65_1 and (not disparo75);
         
         mux_sel7_5(0) <= RESET;
         mux_sel7_5(1) <= disparo75;
         
         mux_in7_5(0) <= Q75;   -- 00
-        mux_in7_5(1) <= '1';    -- 01 RESET
+        mux_in7_5(1) <= '0';    -- 01 RESET
         mux_in7_5(2) <= '0';    -- 10 DISPARO
         mux_in7_5(3) <= Q75;    -- 11
         
         Q7_5 <= Q75 or Q75_1;
         
         -- Mux 7_6
-        disparo76 <= Q6_6 and Q76;
-        disparo76_1 <= Q6_6 and (not disparo76);
+        disparo76 <= Q66_1 and Q76;
+        disparo76_1 <= Q66_1 and (not disparo76);
         
         mux_sel7_6(0) <= RESET;
         mux_sel7_6(1) <= disparo76;
@@ -953,14 +953,14 @@ architecture behav of MatrizLED is
         Q7_6 <= Q76 or Q76_1;
         
         -- Mux 7_7
-        disparo77 <= Q6_7 and Q77;
-        disparo77_1 <= Q6_7 and (not disparo77);
+        disparo77 <= Q67_1 and Q77;
+        disparo77_1 <= Q67_1 and (not disparo77);
         
         mux_sel7_7(0) <= RESET;
         mux_sel7_7(1) <= disparo77;
         
         mux_in7_7(0) <= Q77;   -- 00
-        mux_in7_7(1) <= '1';    -- 01 RESET
+        mux_in7_7(1) <= '0';    -- 01 RESET
         mux_in7_7(2) <= '0';    -- 10 DISPARO
         mux_in7_7(3) <= Q77;    -- 11
         

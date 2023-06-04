@@ -30,8 +30,13 @@ architecture behav of MatrizLED is
     signal QN3_0, QN3_1, QN3_2, QN3_3, QN3_4, QN3_5, QN3_6, QN3_7 : std_logic;
     signal QN4_0, QN4_1, QN4_2, QN4_3, QN4_4, QN4_5, QN4_6, QN4_7 : std_logic;
     signal QN5_0, QN5_1, QN5_2, QN5_3, QN5_4, QN5_5, QN5_6, QN5_7 : std_logic;
+    signal QN50, QN51, QN52, QN53, QN54, QN55, QN56, QN57 : std_logic;
+    signal QN50_1, QN51_1, QN52_1, QN53_1, QN54_1, QN55_1, QN56_1, QN57_1 : std_logic;
     signal QN6_0, QN6_1, QN6_2, QN6_3, QN6_4, QN6_5, QN6_6, QN6_7 : std_logic;
     signal QN7_0, QN7_1, QN7_2, QN7_3, QN7_4, QN7_5, QN7_6, QN7_7 : std_logic;
+    
+    signal Q50 : std_logic;
+    signal Q50_1 : std_logic;
 
     component biestableD is
         port (
@@ -55,6 +60,16 @@ architecture behav of MatrizLED is
     signal muxout0_0, muxout0_1, muxout0_3,  muxout0_2, muxout0_4, muxout0_5, muxout0_6, muxout0_7  : std_logic;
     signal muxout1_0, muxout1_1, muxout1_3,  muxout1_2, muxout1_4, muxout1_5, muxout1_6, muxout1_7  : std_logic;
     signal muxout5_0, muxout5_1, muxout5_3,  muxout5_2, muxout5_4, muxout5_5, muxout5_6, muxout5_7  : std_logic;
+    
+    signal disparo50, disparo50_1 : std_logic;
+    signal disparo51, disparo51_1 : std_logic;
+    signal disparo52, disparo52_1 : std_logic;
+    signal disparo53, disparo53_1 : std_logic;
+    signal disparo54, disparo54_1 : std_logic;
+    signal disparo55, disparo55_1 : std_logic;
+    signal disparo56, disparo56_1 : std_logic;
+    signal disparo57, disparo57_1 : std_logic;
+
 
     component MUX_Generico is 
         generic(N : positive := 2);
@@ -476,7 +491,8 @@ architecture behav of MatrizLED is
         port map(i_i => mux_in5_7, sel_i => mux_sel5_7, ena_i => enable, y_o => muxout5_7);
         
         -- Bies D 1
-         d50: biestableD port map(D => muxout5_0, clk => clkDiv, Q => Q5_0, QN => QN5_0);
+         d50: biestableD port map(D => muxout5_0, clk => clkDiv, Q => Q50, QN => QN50);
+         d50_1: biestableD port map(D => disparo50_1, clk => clkDiv, Q => Q50_1, QN => QN50_1);
          d51: biestableD port map(D => muxout5_1, clk => clkDiv, Q => Q5_1, QN => QN5_1);
          d52: biestableD port map(D => muxout5_2, clk => clkDiv, Q => Q5_2, QN => QN5_2);
          d53: biestableD port map(D => muxout5_3, clk => clkDiv, Q => Q5_3, QN => QN5_3);
@@ -486,13 +502,18 @@ architecture behav of MatrizLED is
          d57: biestableD port map(D => muxout5_7, clk => clkDiv, Q => Q5_7, QN => QN5_7);
          
         -- Mux 5_0
+        disparo50 <= Q4_0 and Q5_0;
+        disparo50_1 <= Q4_0 and (not  disparo50);
+        
         mux_sel5_0(0) <= RESET;
-        mux_sel5_0(1) <= Q4_0;
+        mux_sel5_0(1) <= disparo50;
    
-        mux_in5_0(0) <= Q5_0;   --00
+        mux_in5_0(0) <= Q50;   --00
         mux_in5_0(1) <= '1';    --01 RESET
         mux_in5_0(2) <= '0';    --10 DISPARO
-        mux_in5_0(3) <= Q5_0;    --11
+        mux_in5_0(3) <= Q50;    --11
+        
+        Q5_0 <= Q50 or Q50_1;
         
         -- Mux 5_1
         mux_sel5_1(0) <= RESET;

@@ -1,0 +1,382 @@
+
+*** Running vivado
+    with args -log EncenderLeds.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source EncenderLeds.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source EncenderLeds.tcl -notrace
+Command: synth_design -top EncenderLeds -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16300
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'EncenderLeds' [D:/Codigo/BreakOut_VHDL/Codigo/EncenderLeds.vhd:20]
+INFO: [Synth 8-3491] module 'MatrizLED' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:5' bound to instance 'MatrizLED_inst' of component 'MatrizLED' [D:/Codigo/BreakOut_VHDL/Codigo/EncenderLeds.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'MatrizLED' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:23]
+INFO: [Synth 8-3491] module 'Botones' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/Botones.vhd:4' bound to instance 'boton' of component 'Botones' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'Botones' [D:/Codigo/BreakOut_VHDL/Codigo/Botones.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'Botones' (1#1) [D:/Codigo/BreakOut_VHDL/Codigo/Botones.vhd:9]
+INFO: [Synth 8-3491] module 'DivisorFrecuencia' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/DivisorFrecuencia.vhd:4' bound to instance 'div' of component 'DivisorFrecuencia' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'DivisorFrecuencia' [D:/Codigo/BreakOut_VHDL/Codigo/DivisorFrecuencia.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'DivisorFrecuencia' (2#1) [D:/Codigo/BreakOut_VHDL/Codigo/DivisorFrecuencia.vhd:11]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_0' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:43]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX_Generico' (3#1) [D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:43]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_1' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:171]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_2' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:173]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_3' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:175]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_4' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:177]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_5' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:179]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_6' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:181]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux0_7' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:183]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd00' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:9]
+WARNING: [Synth 8-614] signal 'Q' is read in the process but is not in the sensitivity list [D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'biestableD' (4#1) [D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:9]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd01' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:189]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd02' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:190]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd03' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:191]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd04' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:192]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd05' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:193]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd06' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:194]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd07' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:195]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_0' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:295]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_1' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:297]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_2' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:299]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_3' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:301]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_4' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:303]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_5' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:305]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_6' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:307]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux1_7' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:309]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd10' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:314]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd11' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:315]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd12' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:316]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd13' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:317]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd14' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:318]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd15' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:319]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd16' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:320]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd17' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:321]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd20' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:421]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd30' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:422]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd40' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:423]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd21' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:432]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd31' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:433]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd41' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:434]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd22' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:443]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd32' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:444]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd42' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:445]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd23' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:454]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd33' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:455]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd43' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:456]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd24' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:465]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd34' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:466]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd44' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:467]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd25' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:476]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd35' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:477]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd45' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:478]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd26' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:487]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd36' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:488]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd46' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:489]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd27' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:498]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd37' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:499]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd47' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:500]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_0' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:515]
+INFO: [Synth 8-638] synthesizing module 'MUX_Generico__parameterized2' [D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:43]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX_Generico__parameterized2' (4#1) [D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:43]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_1' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:517]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_2' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:519]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_3' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:521]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_4' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:523]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_5' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:525]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_6' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:527]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux5_7' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:529]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd50' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:533]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd51' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:534]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd52' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:535]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd53' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:536]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd54' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:537]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd55' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:538]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd56' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:539]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd57' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:540]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd50_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:542]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd51_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:543]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd52_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:544]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd53_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:545]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd54_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:546]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd55_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:547]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd56_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:548]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd57_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:549]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_0' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:668]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_1' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:670]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_2' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:672]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_3' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:674]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_4' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:676]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_5' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:678]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_6' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:680]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_Generico' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/MUX_Generico.vhd:34' bound to instance 'Mux6_7' of component 'MUX_Generico' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:682]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd60' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:686]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd61' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:687]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd62' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:688]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd63' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:689]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd64' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:690]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd65' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:691]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd66' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:692]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd67' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:693]
+INFO: [Synth 8-3491] module 'biestableD' declared at 'D:/Codigo/BreakOut_VHDL/Codigo/biestableD.vhd:4' bound to instance 'd60_1' of component 'biestableD' [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:695]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MatrizLED' (5#1) [D:/Codigo/BreakOut_VHDL/Codigo/MatrizLED.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'DivisorFrecuenciaBarridoMatriz' [D:/Codigo/BreakOut_VHDL/Codigo/DivisorFrecuenciaBarridoMatriz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'DivisorFrecuenciaBarridoMatriz' (6#1) [D:/Codigo/BreakOut_VHDL/Codigo/DivisorFrecuenciaBarridoMatriz.vhd:11]
+INFO: [Synth 8-638] synthesizing module 'lineasEncendidas' [D:/Codigo/BreakOut_VHDL/Codigo/lineasEncendidas.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'lineasEncendidas' (7#1) [D:/Codigo/BreakOut_VHDL/Codigo/lineasEncendidas.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'EncenderLeds' (8#1) [D:/Codigo/BreakOut_VHDL/Codigo/EncenderLeds.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1143.691 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Codigo/BreakOut_VHDL/Codigo/ConstraintLedsMatriz.xdc]
+Finished Parsing XDC File [D:/Codigo/BreakOut_VHDL/Codigo/ConstraintLedsMatriz.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Codigo/BreakOut_VHDL/Codigo/ConstraintLedsMatriz.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/EncenderLeds_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/EncenderLeds_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1143.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 106   
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 17    
+	   8 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'RESETLeds' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Codigo/BreakOut_VHDL/Codigo/EncenderLeds.vhd:4]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'izquierdaBotInLeds' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Codigo/BreakOut_VHDL/Codigo/EncenderLeds.vhd:4]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'derechaBotInLeds' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Codigo/BreakOut_VHDL/Codigo/EncenderLeds.vhd:4]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     8|
+|4     |LUT2   |    36|
+|5     |LUT3   |    10|
+|6     |LUT4   |     6|
+|7     |LUT5   |    16|
+|8     |LUT6   |    52|
+|9     |FDRE   |   123|
+|10    |FDSE   |    12|
+|11    |IBUF   |     5|
+|12    |OBUF   |    19|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1143.691 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1143.691 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1143.691 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1143.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ca27b972
+INFO: [Common 17-83] Releasing license: Synthesis
+134 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1143.691 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ready/Desktop/project_2/project_2.runs/synth_1/EncenderLeds.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file EncenderLeds_utilization_synth.rpt -pb EncenderLeds_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  5 00:12:21 2023...

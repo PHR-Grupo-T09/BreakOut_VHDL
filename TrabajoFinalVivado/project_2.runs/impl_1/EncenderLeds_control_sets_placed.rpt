@@ -1,0 +1,86 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Jun  5 00:12:54 2023
+| Host         : PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file EncenderLeds_control_sets_placed.rpt
+| Design       : EncenderLeds
+| Device       : xc7a35t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    17 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     8 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              69 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              58 |           18 |
+| Yes          | No                    | No                     |               8 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |         Enable Signal         |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                               |                                     |                2 |              2 |         1.00 |
+|  div/clkDiv    | MatrizLED_inst/d54_1/i_reg[1] |                                     |                5 |              8 |         1.60 |
+|  Q_reg_i_2_n_0 |                               | MatrizLED_inst/d21/derechaBotInLeds |                2 |              8 |         4.00 |
+|  div/clkDiv    |                               |                                     |                5 |             11 |         2.20 |
+|  Q_reg_i_2_n_0 |                               | RESET1Leds_OBUF                     |                6 |             12 |         2.00 |
+|  clk_IBUF_BUFG |                               | div/count1_carry__0_n_6             |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG |                               | MatrizLED_inst/div/clear            |                6 |             24 |         4.00 |
+|  Q_reg_i_2_n_0 |                               |                                     |               14 |             56 |         4.00 |
++----------------+-------------------------------+-------------------------------------+------------------+----------------+--------------+
+
+
